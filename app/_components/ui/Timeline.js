@@ -1,20 +1,11 @@
 "use client";
-import {
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
-  motion,
-} from "framer-motion";
+import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+import { timelineData } from "@/app/_data";
 
-interface TimelineEntry {
-  title: string;
-  content: React.ReactNode;
-}
-
-export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
+export const Timeline = () => {
+  const ref = useRef(null);
+  const containerRef = useRef(null);
   const [height, setHeight] = useState(0);
 
   useEffect(() => {
@@ -26,7 +17,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 10%", "end 50%"],
+    offset: ["start 10%", "end 90%"],
   });
 
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
@@ -48,7 +39,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
-        {data.map((item, index) => (
+        {timelineData.map((item, index) => (
           <div
             key={index}
             className="flex justify-start pt-10 md:pt-40 md:gap-10"
