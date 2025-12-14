@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import Images from "@/app/_components/Images";
+import { ThreeDMarquee } from "@/app/_components/ui//3d-marquee";
+import { workScreenshots } from "@/app/_data/contents";
 
 export const timelineData = [
   {
@@ -35,8 +37,10 @@ export const timelineData = [
           maintainability, and workflow efficiency by researching emerging
           technologies and implementing best practices across projects.
         </p>
-        <div className="grid grid-cols-2 gap-4">
-          <Images
+        <div className="">
+          <ThreeDMarquee images={workScreenshots} />
+
+          {/* <Images
             src={`https://res.cloudinary.com/kavin-crew/image/upload/v1764315020/GoPro-v3-11-27-2025_05_44_PM_qlzcuj.png`}
             alt="reviews widget"
           />
@@ -57,7 +61,7 @@ export const timelineData = [
             src={`https://res.cloudinary.com/kavin-crew/image/upload/v1765641373/portfolio/SEO_gzmlkk.png`}
             alt="SEO widget"
             translateY={620}
-          />
+          /> */}
         </div>
       </div>
     ),
