@@ -2,12 +2,13 @@
 
 import { motion } from "framer-motion";
 import { cn } from "@/app/_lib/utils";
-export const ThreeDMarquee = ({ images, className }) => {
-  // Split the images array into 4 equal parts
-  const chunkSize = Math.ceil(images.length / 4);
+
+export const ThreeDMarquee = ({ items, className }) => {
+  // Split the items array into 4 equal parts
+  const chunkSize = Math.ceil(items.length / 4);
   const chunks = Array.from({ length: 4 }, (_, colIndex) => {
     const start = colIndex * chunkSize;
-    return images.slice(start, start + chunkSize);
+    return items.slice(start, start + chunkSize);
   });
   return (
     <div
@@ -36,26 +37,35 @@ export const ThreeDMarquee = ({ images, className }) => {
                 className="flex flex-col items-start gap-8"
               >
                 <GridLineVertical className="-left-4" offset="80px" />
-                {subarray.map((image, imageIndex) => (
-                  <div className="relative" key={imageIndex + image}>
-                    <GridLineHorizontal className="-top-4" offset="20px" />
-                    <motion.img
-                      whileHover={{
-                        y: -10,
-                      }}
-                      transition={{
-                        duration: 0.3,
-                        ease: "easeInOut",
-                      }}
-                      key={imageIndex + image}
-                      src={image}
-                      alt={`Image ${imageIndex + 1}`}
-                      className="aspect-970/700 rounded-lg object-cover object-top ring ring-gray-950/5 hover:shadow-2xl"
-                      width={970}
-                      height={700}
-                    />
-                  </div>
-                ))}
+                {subarray.map((item, imageIndex) => {
+                  const ImageWrapper = item.url ? "a" : "div";
+
+                  return (
+                    <div className="relative" key={imageIndex + item.image}>
+                      <GridLineHorizontal className="-top-4" offset="20px" />
+
+                      <ImageWrapper
+                        href={item.url}
+                        target={item.url ? "_blank" : undefined}
+                        rel={item.url ? "noopener noreferrer" : undefined}
+                        className="block"
+                      >
+                        <motion.img
+                          whileHover={{ y: -10 }}
+                          transition={{
+                            duration: 0.3,
+                            ease: "easeInOut",
+                          }}
+                          src={item.image}
+                          alt={`Work preview ${imageIndex + 1}`}
+                          className="aspect-970/700 rounded-lg object-cover object-top ring ring-gray-950/5 hover:shadow-2xl cursor-pointer"
+                          width={970}
+                          height={700}
+                        />
+                      </ImageWrapper>
+                    </div>
+                  );
+                })}
               </motion.div>
             ))}
           </div>
@@ -82,11 +92,11 @@ const GridLineHorizontal = ({ className, offset }) => {
         maskComposite: "exclude",
       }}
       className={cn(
-        "absolute left-[calc(var(--offset)/2*-1)] h-[var(--height)] w-[calc(100%+var(--offset))]",
+        "absolute left-[calc(var(--offset)/2*-1)] h-(--height) w-[calc(100%+var(--offset))]",
         "bg-[linear-gradient(to_right,var(--color),var(--color)_50%,transparent_0,transparent)]",
-        "[background-size:var(--width)_var(--height)]",
-        "[mask:linear-gradient(to_left,var(--background)_var(--fade-stop),transparent),_linear-gradient(to_right,var(--background)_var(--fade-stop),transparent),_linear-gradient(black,black)]",
-        "[mask-composite:exclude]",
+        "bg-size-[var(--width)_var(--height)]",
+        "[mask:linear-gradient(to_left,var(--background)_var(--fade-stop),transparent),linear-gradient(to_right,var(--background)_var(--fade-stop),transparent),linear-gradient(black,black)]",
+        "mask-exclude",
         "z-30",
         "dark:bg-[linear-gradient(to_right,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]",
         className
@@ -112,11 +122,11 @@ const GridLineVertical = ({ className, offset }) => {
         maskComposite: "exclude",
       }}
       className={cn(
-        "absolute top-[calc(var(--offset)/2*-1)] h-[calc(100%+var(--offset))] w-[var(--width)]",
+        "absolute top-[calc(var(--offset)/2*-1)] h-[calc(100%+var(--offset))] w-(--width)",
         "bg-[linear-gradient(to_bottom,var(--color),var(--color)_50%,transparent_0,transparent)]",
-        "[background-size:var(--width)_var(--height)]",
-        "[mask:linear-gradient(to_top,var(--background)_var(--fade-stop),transparent),_linear-gradient(to_bottom,var(--background)_var(--fade-stop),transparent),_linear-gradient(black,black)]",
-        "[mask-composite:exclude]",
+        "bg-size-[var(--width)_var(--height)]",
+        "[mask:linear-gradient(to_top,var(--background)_var(--fade-stop),transparent),linear-gradient(to_bottom,var(--background)_var(--fade-stop),transparent),linear-gradient(black,black)]",
+        "mask-exclude",
         "z-30",
         "dark:bg-[linear-gradient(to_bottom,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]",
         className

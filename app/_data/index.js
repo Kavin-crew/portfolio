@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Images from "@/app/_components/Images";
 import { ThreeDMarquee } from "@/app/_components/ui//3d-marquee";
-import { workScreenshots } from "@/app/_data/contents";
+import { workScreenshot } from "@/app/_data/contents";
 
 export const timelineData = [
   {
@@ -15,7 +15,7 @@ export const timelineData = [
             <span className="text-cyan-500"> @ Yotpo</span>
           </Link>
         </h2>
-        <p className="mb-8 text-xs font-normal text-zinc-600 dark:text-zinc-400 md:text-base">
+        <p className="mb-8 text-base font-normal text-zinc-600 dark:text-zinc-400 md:text-base">
           In my role as a Customizations UGC Developer, I design, develop, and
           implement customized web components that enhance client websites and
           user-generated content experiences. My work involves creating and
@@ -24,7 +24,7 @@ export const timelineData = [
           practices. I ensure all deliverables meet high standards of
           performance, accessibility, and cross-browser compatibility.
         </p>
-        <p className="mb-8 text-xs font-normal text-zinc-600 dark:text-zinc-400 md:text-base">
+        <p className="mb-8 text-base font-normal text-zinc-600 dark:text-zinc-400 md:text-base">
           Collaborating closely with designers, developers, and clients, I
           translate design specifications into functional, visually consistent
           solutions that align with brand and technical requirements. I manage
@@ -32,36 +32,13 @@ export const timelineData = [
           timely delivery while conducting quality and security assessments to
           ensure code reliability.
         </p>
-        <p className="mb-8 text-xs font-normal text-zinc-600 dark:text-zinc-400 md:text-base">
+        <p className="mb-8 text-base font-normal text-zinc-600 dark:text-zinc-400 md:text-base">
           Additionally, I contribute to ongoing improvements in scalability,
           maintainability, and workflow efficiency by researching emerging
           technologies and implementing best practices across projects.
         </p>
         <div className="">
-          <ThreeDMarquee images={workScreenshots} />
-
-          {/* <Images
-            src={`https://res.cloudinary.com/kavin-crew/image/upload/v1764315020/GoPro-v3-11-27-2025_05_44_PM_qlzcuj.png`}
-            alt="reviews widget"
-          />
-
-          <Images
-            src={`https://res.cloudinary.com/kavin-crew/image/upload/v1765640573/portfolio/ARR_lxyjof.png`}
-            alt="ARR"
-            translateY={1015}
-          />
-
-          <Images
-            src={`https://res.cloudinary.com/kavin-crew/image/upload/v1765640240/portfolio/Landing_page_hykg2s.png`}
-            alt="landing page"
-            translateY={860}
-          />
-
-          <Images
-            src={`https://res.cloudinary.com/kavin-crew/image/upload/v1765641373/portfolio/SEO_gzmlkk.png`}
-            alt="SEO widget"
-            translateY={620}
-          /> */}
+          <ThreeDMarquee items={workScreenshot} />
         </div>
       </div>
     ),
@@ -76,7 +53,7 @@ export const timelineData = [
             <span className="text-cyan-500"> @ Proweaver</span>
           </Link>
         </h2>
-        <p className="mb-8 text-xs font-normal md:text-base text-zinc-600 dark:text-zinc-400">
+        <p className="mb-8 text-base font-normal md:text-base text-zinc-600 dark:text-zinc-400">
           I create website pages based on provided design layouts while ensuring
           the continuous upkeep and improvement of existing sites. I accurately
           interpret and implement client instructions, collaborate effectively
@@ -90,28 +67,28 @@ export const timelineData = [
             alt="hero template"
             width={500}
             height={500}
-            className="h-20 w-full rounded-lg object-cover object-top https://res.cloudinary.com/kavin-crew/image/upload/v1765625386/portfolio/Landing_page_hykg2s.png shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            className="h-20 w-full rounded-lg object-cover object-top shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
           />
           <Image
             src="https://assets.aceternity.com/features-section.png"
             alt="feature template"
             width={500}
             height={500}
-            className="h-20 w-full rounded-lg object-cover object-top https://res.cloudinary.com/kavin-crew/image/upload/v1765625386/portfolio/Landing_page_hykg2s.png shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            className="h-20 w-full rounded-lg object-cover object-top shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
           />
           <Image
             src="https://assets.aceternity.com/pro/bento-grids.png"
             alt="bento template"
             width={500}
             height={500}
-            className="h-20 w-full rounded-lg object-cover object-top https://res.cloudinary.com/kavin-crew/image/upload/v1765625386/portfolio/Landing_page_hykg2s.png shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            className="h-20 w-full rounded-lg object-cover object-top shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
           />
           <Image
             src="https://assets.aceternity.com/cards.png"
             alt="cards template"
             width={500}
             height={500}
-            className="h-20 w-full rounded-lg object-cover object-top https://res.cloudinary.com/kavin-crew/image/upload/v1765625386/portfolio/Landing_page_hykg2s.png shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            className="h-20 w-full rounded-lg object-cover object-top shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
           />
         </div>
       </div>
@@ -130,7 +107,7 @@ export const timelineData = [
             <span className="text-cyan-500"> @ PMAXGlobal Philippines</span>
           </Link>
         </h2>
-        <p className="mb-4 text-xs font-normal md:text-base text-zinc-600 dark:text-zinc-400">
+        <p className="mb-4 text-base font-normal md:text-base text-zinc-600 dark:text-zinc-400">
           Collected medical documents from various EHR systems and managed
           insurance-related requests while ensuring accuracy through data review
           and supporting internal projects.
