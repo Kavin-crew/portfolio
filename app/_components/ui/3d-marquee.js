@@ -17,13 +17,13 @@ export const ThreeDMarquee = ({ items, className }) => {
         className
       )}
     >
-      <div className="flex size-full items-center justify-center">
-        <div className="size-430 shrink-0 scale-50 sm:scale-75 lg:scale-100">
+      <div className="relative flex size-full items-center justify-center">
+        <div className="w-full h-auto shrink-0 scale-50 sm:scale-75 lg:scale-100">
           <div
             style={{
               transform: "rotateX(55deg) rotateY(0deg) rotateZ(-45deg)",
             }}
-            className="relative top-96 right-[50%] grid size-full origin-top-left grid-cols-4 gap-8 transform-3d"
+            className="absolute left-1/2 -translate-x-1/2 w-600 lg:w-350 md:w-450 grid size-full origin-top-left grid-cols-4 gap-8 transform-3d"
           >
             {chunks.map((subarray, colIndex) => (
               <motion.div
@@ -58,9 +58,7 @@ export const ThreeDMarquee = ({ items, className }) => {
                           }}
                           src={item.image}
                           alt={`Work preview ${imageIndex + 1}`}
-                          className="aspect-970/700 rounded-lg object-cover object-top ring ring-gray-950/5 hover:shadow-2xl cursor-pointer"
-                          width={970}
-                          height={700}
+                          className="aspect-8/3 w-full h-auto rounded-lg object-fit object-top ring ring-gray-950/5 hover:shadow-2xl cursor-pointer"
                         />
                       </ImageWrapper>
                     </div>

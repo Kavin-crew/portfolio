@@ -37,9 +37,8 @@ export const timelineData = [
           maintainability, and workflow efficiency by researching emerging
           technologies and implementing best practices across projects.
         </p>
-        <div className="">
-          <ThreeDMarquee items={workScreenshot} />
-        </div>
+
+        <ThreeDMarquee items={workScreenshot} />
       </div>
     ),
   },
