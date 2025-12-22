@@ -1,3 +1,9 @@
+import {
+  CalendarDaysIcon,
+  HomeIcon,
+  UserIcon,
+} from "@heroicons/react/24/solid";
+
 export const workScreenshot = [
   {
     image:
@@ -231,5 +237,24 @@ export const workScreenshot = [
     image:
       "https://res.cloudinary.com/kavin-crew/image/upload/v1766417104/portfolio-images/GoPro-v3-11-27-2025_05_44_PM_qlzcuj_qlmelf.png",
     url: "https://go-pro-v3.vercel.app/",
+  },
+];
+export const navItems = [
+  {
+    name: "Home",
+    link: "/",
+    icon: <HomeIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
+  {
+    name: "About",
+    link: "/",
+    icon: <UserIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
+  {
+    name: "Contact",
+    link: "/",
+    icon: (
+      <CalendarDaysIcon className="h-4 w-4 text-neutral-500 dark:text-white" />
+    ),
   },
 ];
