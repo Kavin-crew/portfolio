@@ -1,9 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import HeadingSecondary from "@/app/_components/HeadingSecondary";
 import Paragraph from "@/app/_components/Paragraph";
 import { ThreeDMarquee } from "@/app/_components/ui//3d-marquee";
-import { workScreenshot } from "@/app/_data/contents";
+import { workScreenshot, workScreenshotWeaver } from "@/app/_data/contents";
 
 export const timelineData = [
   {
@@ -61,36 +60,7 @@ export const timelineData = [
           issues that arise. Throughout my work, I consistently adhere to
           company standards and guidelines.
         </Paragraph>
-        <div className="grid grid-cols-2 gap-4">
-          <Image
-            src="https://assets.aceternity.com/pro/hero-sections.png"
-            alt="hero template"
-            width={500}
-            height={500}
-            className="h-20 w-full rounded-lg object-cover object-top shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
-          />
-          <Image
-            src="https://assets.aceternity.com/features-section.png"
-            alt="feature template"
-            width={500}
-            height={500}
-            className="h-20 w-full rounded-lg object-cover object-top shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
-          />
-          <Image
-            src="https://assets.aceternity.com/pro/bento-grids.png"
-            alt="bento template"
-            width={500}
-            height={500}
-            className="h-20 w-full rounded-lg object-cover object-top shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
-          />
-          <Image
-            src="https://assets.aceternity.com/cards.png"
-            alt="cards template"
-            width={500}
-            height={500}
-            className="h-20 w-full rounded-lg object-cover object-top shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
-          />
-        </div>
+        <ThreeDMarquee items={workScreenshotWeaver} />
       </div>
     ),
   },

@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 
 export const Navbar = ({ children, className }) => {
   const ref = useRef(null);
@@ -31,7 +31,7 @@ export const Navbar = ({ children, className }) => {
     <motion.div
       ref={ref}
       // IMPORTANT: Change this to class of `fixed` if you want the navbar to be fixed
-      className={cn("sticky inset-x-0 top-20 z-40 w-full", className)}
+      className={cn("fixed inset-x-0 top-5 z-40 w-full", className)}
     >
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
@@ -115,7 +115,7 @@ export const MobileNav = ({ children, className, visible }) => {
         width: visible ? "90%" : "100%",
         paddingRight: visible ? "12px" : "0px",
         paddingLeft: visible ? "12px" : "0px",
-        borderRadius: visible ? "4px" : "2rem",
+        borderRadius: visible ? "100px" : "2rem",
         y: visible ? 20 : 0,
       }}
       transition={{
@@ -138,7 +138,7 @@ export const MobileNavHeader = ({ children, className }) => {
   return (
     <div
       className={cn(
-        "flex w-full flex-row items-center justify-between",
+        "flex w-full flex-row items-center justify-between pr-2",
         className
       )}
     >
@@ -169,9 +169,15 @@ export const MobileNavMenu = ({ children, className, isOpen, onClose }) => {
 
 export const MobileNavToggle = ({ isOpen, onClick }) => {
   return isOpen ? (
-    <XMarkIcon className="text-black dark:text-white" onClick={onClick} />
+    <XMarkIcon
+      className="text-black dark:text-white w-6 h-6"
+      onClick={onClick}
+    />
   ) : (
-    <Bars4Icon className="text-black dark:text-white" onClick={onClick} />
+    <Bars4Icon
+      className="text-black dark:text-white w-6 h-6"
+      onClick={onClick}
+    />
   );
 };
 
@@ -179,15 +185,15 @@ export const NavbarLogo = () => {
   return (
     <a
       href="#"
-      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
+      className="relative z-20 mr-4 flex items-center space-x-2 px-2  py-1 text-sm font-normal text-black"
     >
       <Image
-        src="https://assets.aceternity.com/logo-dark.png"
+        src="https://avatars.githubusercontent.com/u/129659804?v=4"
         alt="logo"
         width={30}
         height={30}
       />
-      <span className="font-medium text-black dark:text-white">Startup</span>
+      <span className="font-medium text-black dark:text-white">Kavin A.</span>
     </a>
   );
 };
