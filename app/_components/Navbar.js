@@ -11,23 +11,9 @@ import {
   MobileNavMenu,
 } from "@/app/_components/ui/ResizeableNavbar";
 import { useState } from "react";
+import { navItems } from "@/app/_data/contents";
 
 export function NavbarDemo() {
-  const navItems = [
-    {
-      name: "About",
-      link: "#About",
-    },
-    {
-      name: "Projects",
-      link: "#projects",
-    },
-    {
-      name: "Contact",
-      link: "#contact",
-    },
-  ];
-
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
@@ -38,8 +24,8 @@ export function NavbarDemo() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="secondary">Login</NavbarButton>
-            <NavbarButton variant="primary">Book a call</NavbarButton>
+            {/* <NavbarButton variant="secondary">Login</NavbarButton> */}
+            <NavbarButton variant="primary">Download Resume</NavbarButton>
           </div>
         </NavBody>
 
@@ -73,14 +59,7 @@ export function NavbarDemo() {
                 variant="primary"
                 className="w-full"
               >
-                Login
-              </NavbarButton>
-              <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
-              >
-                Book a call
+                Download Resume
               </NavbarButton>
             </div>
           </MobileNavMenu>

@@ -26,9 +26,10 @@ export const Timeline = () => {
   return (
     <div
       className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
+      id="projects"
       ref={containerRef}
     >
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
+      <div className="max-w-7xl mx-auto pb-20 pt-30 md:pt-40 px-4 md:px-8 lg:px-10">
         <h2 className="text-4xl font-bold tracking-tight  sm:text-3xl text-zinc-800 dark:text-zinc-100">
           Changelog from my career
         </h2>

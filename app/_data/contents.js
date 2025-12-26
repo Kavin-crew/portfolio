@@ -135,11 +135,6 @@ export const workScreenshot = [
   },
   {
     image:
-      "https://res.cloudinary.com/kavin-crew/image/upload/v1766416355/portfolio-images/Levlup-v3-12-15-2025_12_42_AM_jpzzcd_bcedh0.png",
-    url: "https://levlup-v3.vercel.app/",
-  },
-  {
-    image:
       "https://res.cloudinary.com/kavin-crew/image/upload/v1766416363/portfolio-images/Soeju-v3-12-15-2025_12_28_AM_ub927l_gkpxv3.png",
     url: "https://soeju-v3.vercel.app/",
   },
@@ -393,13 +388,13 @@ export const navItems = [
     icon: <HomeIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
   {
-    name: "About",
-    link: "/",
+    name: "Projects",
+    link: "#projects",
     icon: <UserIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
   {
     name: "Contact",
-    link: "/",
+    link: "#contact",
     icon: (
       <CalendarDaysIcon className="h-4 w-4 text-neutral-500 dark:text-white" />
     ),

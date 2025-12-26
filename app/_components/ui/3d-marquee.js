@@ -18,7 +18,7 @@ export const ThreeDMarquee = ({ items, className }) => {
       )}
     >
       <div className="relative flex size-full items-center justify-center">
-        <div className="w-full h-auto shrink-0 scale-50 sm:scale-75 lg:scale-100">
+        <div className="w-full md:w-400  h-auto shrink-0 scale-50 sm:scale-75 lg:scale-100">
           <div
             style={{
               transform: "rotateX(55deg) rotateY(0deg) rotateZ(-45deg)",
@@ -58,7 +58,7 @@ export const ThreeDMarquee = ({ items, className }) => {
                           }}
                           src={item.image}
                           alt={`Work preview ${imageIndex + 1}`}
-                          className="aspect-8/3 w-full h-auto rounded-lg object-fit object-top ring ring-gray-950/5 hover:shadow-2xl cursor-pointer"
+                          className="aspect-10/5 w-full h-auto rounded-lg object-fit object-top ring ring-gray-950/5 hover:shadow-2xl cursor-pointer"
                         />
                       </ImageWrapper>
                     </div>
