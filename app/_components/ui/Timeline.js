@@ -33,7 +33,7 @@ export const Timeline = () => {
         <h2 className="text-4xl font-bold tracking-tight  sm:text-3xl text-zinc-800 dark:text-zinc-100">
           Changelog from my career
         </h2>
-        <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400 md:text-base max-w-sm">
+        <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400 md:text-base max-w-lg">
           I&apos;ve been crafting modern, responsive, and accessible web
           interfaces as a Front-End Web Developer. Below is a timeline of the
           projects, roles, and milestones that define my career.
