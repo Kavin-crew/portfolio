@@ -1,7 +1,7 @@
 "use client";
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
-import { timelineData } from "@/app/_data";
+import { timelineData } from "@/app/_data/contents";
 
 export const Timeline = () => {
   const ref = useRef(null);
@@ -24,23 +24,23 @@ export const Timeline = () => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div
-      className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
+    <section
+      className="w-full bg-white dark:bg-neutral-950 md:px-10"
       id="projects"
       ref={containerRef}
     >
-      <div className="max-w-7xl mx-auto pb-20 pt-30 md:pt-40 px-4 md:px-8 lg:px-10">
+      <div className="max-w-7xl mx-auto pb-20 pt-20 px-4 md:px-8 lg:pb-32 lg:pt-32">
         <h2 className="text-4xl font-bold tracking-tight  sm:text-3xl text-zinc-800 dark:text-zinc-100">
           Changelog from my career
         </h2>
-        <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400 md:text-base max-w-lg">
+        <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400 md:text-base max-w-4xl">
           I&apos;ve been crafting modern, responsive, and accessible web
           interfaces as a Front-End Web Developer. Below is a timeline of the
           projects, roles, and milestones that define my career.
         </p>
       </div>
 
-      <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
+      <div ref={ref} className="relative max-w-7xl mx-auto pb-20 lg:pb-32">
         {timelineData.map((item, index) => (
           <div
             key={index}
@@ -78,6 +78,6 @@ export const Timeline = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };

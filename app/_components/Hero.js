@@ -2,10 +2,11 @@
 
 import { motion } from "framer-motion";
 import React from "react";
-import { AuroraBackground } from "@/app/_components/ui/AuroraBackground";
 import Image from "next/image";
-import { heroContent } from "@/app/_data/contents";
 import Link from "next/link";
+import { heroContent } from "@/app/_data/contents";
+import { AuroraBackground } from "@/app/_components/ui/AuroraBackground";
+import { BriefcaseIcon } from "@heroicons/react/24/solid";
 
 export function Hero() {
   return (
@@ -19,9 +20,9 @@ export function Hero() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="relative flex flex-col gap-4 items-center justify-center px-4"
+        className="relative flex flex-col gap-4 items-center justify-center px-4 "
       >
-        <div className="flex justify-center items-center flex-col max-w-7xl text-center px-4 md:px-8 lg:px-10">
+        <div className="flex justify-center items-center flex-col max-w-7xl text-center px-0 md:px-8 lg:px-10">
           <Image
             src="https://res.cloudinary.com/kavin-crew/image/upload/e_background_removal/b_rgb:8F76F3/c_fill,w_160,h_160,ar_1:1,f_png/v1767458261/portfolio-images/Screenshot_2025-11-18_025020_rqcfhz.png"
             alt="Image of Kavin"
@@ -29,24 +30,20 @@ export function Hero() {
             width={160}
             height={160}
           />
-          <h1 className="text-4xl font-bold mt-8 tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Software designer, founder, and amateur astronaut.
+          <h1 className="text-2xl font-bold mt-8 tracking-tight text-zinc-800 md:text-3xl dark:text-zinc-100">
+            Front-end development focused on clarity, speed, and business
+            impact.
           </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I&apos;m a passionate Front-End Web Developer with experience
-            building responsive, user-friendly websites using HTML, CSS,
-            JavaScript (React, Nextjs), Wordpress (Divi, Elementor), Git. I
-            specialize in creating clean, efficient UIs and solving problems
-            through code. I&apos;m currently open to freelance, part-time, and
-            work-from-home (WFH) opportunities where I can collaborate with
-            teams or clients remotely. Whether it’s improving UI/UX, fixing
-            bugs, or building full websites from scratch—I’m eager to contribute
-            and grow.
+          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400 max-w-3xl">
+            I turn designs into polished, interactive web experiences. Built
+            with attention to detail, performance, and real-world usability.
+            Focused on creating interfaces users actually enjoy using.
           </p>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            ✅ Available for: Full-Time | Freelance | Part-Time
+            <BriefcaseIcon className="h-4 w-4 pb-0.5 mr-1 fill-zinc-500 inline-block" />
+            Available for: Full-Time • Part-Time • Freelance
           </p>
-          <h3 class="mt-7 text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+          <h3 className="mt-7 text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
             Let&apos;s connect
           </h3>
           <div className="mt-3 flex gap-6">

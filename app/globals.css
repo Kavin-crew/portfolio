@@ -1,8 +1,60 @@
 @import "tailwindcss";
 
+/* 
+--TYPOGRAPHY
+
+FONT SIZE SYSTEM (px)
+12px → text-xs
+14px → text-sm
+16px → text-base
+18px → text-lg
+20px → text-xl
+24px → text-2xl
+30px → text-3xl
+36px → text-4xl
+
+Letter-spacing: 
+-0.5px
+0.5px
+line-height: 1
+             1.6
+font-weight: 400
+Medium:      500
+Semi-Bold:   600
+Bold:        700
+
+--COLORS
+
+Main color:
+Tint/Lighter:
+
+Shade/Darker:
+Accent color:
+Grey color: 
+
+--SHADOWS
+box-shadow: 
+--BORDER RADIUS
+
+--WHITESPACE
+SPACING SYSTEM 
+2px   → 0.5
+4px   → 1
+8px   → 2
+12px  → 3
+16px  → 4
+24px  → 6
+32px  → 8
+48px  → 12
+64px  → 16
+80px  → 20
+96px  → 24
+128px → 32
+*/
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #52525c;
 }
 
 @theme inline {
