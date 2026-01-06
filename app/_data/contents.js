@@ -492,8 +492,8 @@ export const timelineData = [
           technologies and implementing best practices across projects.
         </Paragraph>
 
-        <h3 class="text-base font-semibold tracking-tight mb-5 text-zinc-800 dark:text-zinc-100">
-          Featured Projects
+        <h3 className="text-lg font-semibold mb-5 text-zinc-800 dark:text-zinc-100">
+          Career Highlights
         </h3>
         <ThreeDMarquee items={workScreenshot} />
       </div>
@@ -520,8 +520,8 @@ export const timelineData = [
           issues that arise. Throughout my work, I consistently adhere to
           company standards and guidelines.
         </Paragraph>
-        <h3 class="text-base font-semibold tracking-tight mb-5 text-zinc-800 dark:text-zinc-100">
-          Featured Projects
+        <h3 className="text-lg font-semibold mb-5 text-zinc-800 dark:text-zinc-100">
+          Career Highlights
         </h3>
         <ThreeDMarquee items={workScreenshotWeaver} />
       </div>

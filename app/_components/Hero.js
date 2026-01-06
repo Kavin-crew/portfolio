@@ -43,7 +43,7 @@ export function Hero() {
             <BriefcaseIcon className="h-4 w-4 pb-0.5 mr-1 fill-zinc-500 inline-block" />
             Available for: Full-Time • Part-Time • Freelance
           </p>
-          <h3 className="mt-7 text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+          <h3 className="mt-7 text-lg font-semibold text-zinc-800 dark:text-zinc-100">
             Let&apos;s connect
           </h3>
           <div className="mt-3 flex gap-6">
