@@ -1,6 +1,7 @@
 import { Timeline } from "@/app/_components/ui/Timeline";
 import { Hero } from "@/app/_components/Hero";
-import { NavbarDemo } from "./_components/Navbar";
+import { NavbarDemo } from "@/app/_components/Navbar";
+import Footer from "@/app/_components/Footer";
 
 export default function HomePage() {
   return (
@@ -10,6 +11,7 @@ export default function HomePage() {
         <Hero />
         <Timeline />
       </main>
+      {/* <Footer /> */}
     </div>
   );
 }

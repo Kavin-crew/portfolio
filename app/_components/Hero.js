@@ -30,7 +30,7 @@ export function Hero() {
             width={160}
             height={160}
           />
-          <h1 className="text-2xl font-bold mt-8 tracking-tight text-zinc-800 md:text-3xl dark:text-zinc-100">
+          <h1 className="text-2xl font-bold mt-8 text-zinc-800 md:text-3xl dark:text-zinc-100">
             Front-end development focused on clarity, speed, and business
             impact.
           </h1>
