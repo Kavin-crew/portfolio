@@ -2,6 +2,7 @@ import { Timeline } from "@/app/_components/ui/Timeline";
 import { Hero } from "@/app/_components/Hero";
 import { NavbarDemo } from "@/app/_components/Navbar";
 import Footer from "@/app/_components/Footer";
+import Milestone from "@/app/_components/Milestone";
 
 export default function HomePage() {
   return (
@@ -10,8 +11,8 @@ export default function HomePage() {
       <main>
         <Hero />
         <Timeline />
+        <Milestone />
       </main>
-      {/* <Footer /> */}
     </div>
   );
 }

@@ -45,7 +45,7 @@ export const Navbar = ({ children, className }) => {
 
 export const NavBody = ({ children, className, visible }) => {
   return (
-    <motion.div
+    <motion.nav
       animate={{
         backdropFilter: visible ? "blur(10px)" : "none",
         boxShadow: visible
@@ -69,7 +69,7 @@ export const NavBody = ({ children, className, visible }) => {
       )}
     >
       {children}
-    </motion.div>
+    </motion.nav>
   );
 };
 

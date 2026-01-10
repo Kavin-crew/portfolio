@@ -3,6 +3,8 @@ import {
   CalendarDaysIcon,
   HomeIcon,
   UserIcon,
+  PhoneIcon,
+  TrophyIcon,
 } from "@heroicons/react/24/solid";
 import HeadingSecondary from "@/app/_components/HeadingSecondary";
 import Paragraph from "@/app/_components/Paragraph";
@@ -399,11 +401,14 @@ export const navItems = [
     icon: <UserIcon className="h-4 w-4 via-violet-400 dark:text-white" />,
   },
   {
+    name: "Milestone",
+    link: "#milestone",
+    icon: <TrophyIcon className="h-4 w-4 via-violet-400 dark:text-white" />,
+  },
+  {
     name: "Contact",
     link: "#contact",
-    icon: (
-      <CalendarDaysIcon className="h-4 w-4 via-violet-400 dark:text-white" />
-    ),
+    icon: <PhoneIcon className="h-4 w-4 via-violet-400 dark:text-white" />,
   },
 ];
 
@@ -457,7 +462,24 @@ export const heroContent = [
 // Timeline Data
 export const timelineData = [
   {
-    title: "Mar 2024 - Present",
+    title: "Dec 2025 - Present",
+    content: (
+      <div key="2026">
+        <HeadingSecondary>Freelance Web Developer</HeadingSecondary>
+        <Paragraph>
+          I build and maintain WordPress websites using Elementor, supported by
+          hands-on coding experience in HTML, CSS, and JavaScript. My recent
+          projects include replicating reference websites, managing content
+          updates, configuring redirects and hosting settings on Hostinger,
+          implementing SEO meta titles and descriptions, and adding custom
+          schema tags to improve search visibility. I prioritize responsive
+          design, clean structure, and reliable performance for every project.
+        </Paragraph>
+      </div>
+    ),
+  },
+  {
+    title: "Mar 2024 - Jan 2026",
     content: (
       <div key="2024">
         <HeadingSecondary>
@@ -550,5 +572,73 @@ export const timelineData = [
         </Paragraph>
       </div>
     ),
+  },
+];
+
+export const cardsAwards = [
+  {
+    title: "Achievements from Yotpo",
+    imgHeight: "300",
+    imgWidth: "100",
+    src: "https://res.cloudinary.com/kavin-crew/image/upload/v1768064350/portfolio-images/achievements-yotpo_y23f20.jpg",
+    content: () => {
+      return (
+        <p>
+          Grateful to Share a Milestone in My Yotpo Journey As I wrap up my time
+          at Yotpo, I wanted to take a moment to reflect on a chapter that truly
+          shaped me—not just as a developer, but as a professional. I recently
+          received a formal certification summarizing my performance rankings
+          throughout my entire tenure, and I’m incredibly proud and humbled to
+          share these
+        </p>
+      );
+    },
+  },
+
+  {
+    title: "Top Performer - Nov. 2022",
+    imgHeight: "300",
+    imgWidth: "100",
+    src: "https://res.cloudinary.com/kavin-crew/image/upload/v1768064350/portfolio-images/Nov_-_2022_bllx54.jpg",
+    content: () => {
+      return <p>Recognation for February 2023</p>;
+    },
+  },
+  {
+    title: "Top Performer - Oct. 2022",
+    imgHeight: "400",
+    imgWidth: "100",
+    src: "https://res.cloudinary.com/kavin-crew/image/upload/v1768064350/portfolio-images/Oct_-_2022_cert_hxkx1b.jpg",
+    content: () => {
+      return <p>Recognation for February 2023</p>;
+    },
+  },
+  {
+    title: "WP Ace Developer Award - Feb. 2023",
+    imgHeight: "400",
+    imgWidth: "100",
+    src: "https://res.cloudinary.com/kavin-crew/image/upload/v1768064349/portfolio-images/Feb_2023_acpv33.jpg",
+    content: () => {
+      return <p>Recognation for February 2023</p>;
+    },
+  },
+  {
+    title: "WP Ace Developer Award - Sept. 2022",
+    imgHeight: "400",
+    imgWidth: "100",
+    src: "https://res.cloudinary.com/kavin-crew/image/upload/v1768064351/portfolio-images/Sept_2022_cd7uq8.jpg",
+    content: () => {
+      return <p>Recognation for February 2023</p>;
+    },
+  },
+
+  {
+    title: "WP Ace Developer Award - Oct. 2022",
+    imgHeight: "400",
+    imgWidth: "100",
+    src: "https://res.cloudinary.com/kavin-crew/image/upload/v1768064350/portfolio-images/Oct_2022_mxtur9.jpg",
+    content: () => {
+      return <p>Recognation for February 2023</p>;
+    },
   },
 ];
