@@ -4,9 +4,8 @@ import Image from "next/image";
 import { useState, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/app/_hooks/useOutsideClick";
-import { cardsAwards } from "@/app/_data/contents";
 
-export default function Card() {
+export default function Card({ cardsContent }) {
   const [activeCard, setActiveCard] = useState(null);
   const modalRef = useRef(null);
 
@@ -15,7 +14,7 @@ export default function Card() {
   return (
     <>
       <ul className="w-full mt-15 grid  gap-x-12 gap-y-16 grid-cols-1 md:gap-x-6 sm:grid-cols-2 md:gap-y-9 md:grid-cols-3 lg:grid-cols-4">
-        {cardsAwards.map((card, index) => (
+        {cardsContent.map((card, index) => (
           <li
             className="group relative flex flex-col px-8 py-6 items-center sm:items-start rounded-lg cursor-pointer min-w-full hover:bg-zinc-50 hover:dark:bg-zinc-800/50 transition-colors duration-300 ease-linear"
             key={`card-${card.title}-${index}`}

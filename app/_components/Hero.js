@@ -24,7 +24,7 @@ export function Hero() {
       >
         <div className="flex justify-center items-center flex-col max-w-7xl text-center px-0 md:px-8 lg:px-10">
           <Image
-            src="https://res.cloudinary.com/kavin-crew/image/upload/e_background_removal/b_rgb:8F76F3/c_fill,w_160,h_160,ar_1:1,f_png/v1767458261/portfolio-images/Screenshot_2025-11-18_025020_rqcfhz.png"
+            src="https://res.cloudinary.com/kavin-crew/image/upload/v1768151509/portfolio-images/ChatGPT_Image_Jan_12_2026_12_30_15_AM_lfat2d.png"
             alt="Image of Kavin"
             className="block aspect-square object-cover h-20 w-20 rounded-full pointer-events-auto"
             width={160}

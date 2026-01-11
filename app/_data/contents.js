@@ -15,6 +15,7 @@ import {
   FaStarHalfAlt, // Half star (optional rating)
   FaStarOfLife, // Special star/importance
 } from "react-icons/fa";
+import { SiUdemy } from "react-icons/si";
 import HeadingSecondary from "@/app/_components/HeadingSecondary";
 import Paragraph from "@/app/_components/Paragraph";
 import { ThreeDMarquee } from "@/app/_components/ui//3d-marquee";
@@ -633,5 +634,40 @@ export const cardsAwards = [
     src: "https://res.cloudinary.com/kavin-crew/image/upload/v1768064351/portfolio-images/Sept_2022_cd7uq8.jpg",
     content:
       "This award was presented to me for delivering the highest site conversion rate.",
+  },
+];
+
+export const trainingCertifications = [
+  {
+    title: "The Ultimate React Course 2024: React, Next.js, Redux & More",
+    description: "February 2024",
+    icon: <SiUdemy className="h-4 w-4 text-violet-500" />,
+    src: "https://res.cloudinary.com/kavin-crew/image/upload/v1768064351/portfolio-images/React-2024_eiquva.jpg",
+    content:
+      "A complete, project-driven React development course that took me from beginner to advanced proficiency. I mastered modern React workflows, Next.js (App Router & Server Components), Redux state management, performance patterns, and practical app features — all through building multiple real-world applications.",
+  },
+  {
+    title: "The Complete JavaScript Course 2023: From Zero to Expert!",
+    description: "September 2023",
+    icon: <SiUdemy className="h-4 w-4 text-violet-500" />,
+    src: "https://res.cloudinary.com/kavin-crew/image/upload/v1768064349/portfolio-images/JS-2023_ai0mih.jpg",
+    content:
+      "A complete, project-based JavaScript course that built my skills from beginner to expert level — covering modern syntax, advanced patterns, asynchronous programming, debugging, and real-world application development. This foundation equips me to build dynamic user interfaces and progress into advanced front-end technologies with confidence.",
+  },
+  {
+    title: "Advanced CSS and Sass: Flexbox, Grid, Animations and More!",
+    description: "September 2023",
+    icon: <SiUdemy className="h-4 w-4 text-violet-500" />,
+    src: "https://res.cloudinary.com/kavin-crew/image/upload/v1768064351/portfolio-images/SCSS-2023_kcevdp.jpg",
+    content:
+      "An advanced CSS certification focused on modern styling techniques — Flexbox, CSS Grid, animations, and SCSS — with real-world project applications. This course deepened my understanding of responsive layout systems and scalable CSS architecture, empowering me to build polished, production-ready user interfaces.",
+  },
+  {
+    title: "Build Responsive Real-World Websites with HTML and CSS",
+    description: "November 2021",
+    icon: <SiUdemy className="h-4 w-4 text-violet-500" />,
+    src: "https://res.cloudinary.com/kavin-crew/image/upload/v1768064349/portfolio-images/HTML_CSS_-_2021_u6buhq.jpg",
+    content:
+      "A project-based course that taught me how to build responsive, real-world websites using semantic HTML and modern CSS layout techniques like Flexbox and Grid. This strengthened my ability to create accessible, adaptive user interfaces and solidified core front-end fundamentals.",
   },
 ];
