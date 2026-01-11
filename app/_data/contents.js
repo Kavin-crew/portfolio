@@ -1,6 +1,5 @@
 import Link from "next/link";
 import {
-  CalendarDaysIcon,
   HomeIcon,
   UserIcon,
   PhoneIcon,
@@ -669,5 +668,13 @@ export const trainingCertifications = [
     src: "https://res.cloudinary.com/kavin-crew/image/upload/v1768064349/portfolio-images/HTML_CSS_-_2021_u6buhq.jpg",
     content:
       "A project-based course that taught me how to build responsive, real-world websites using semantic HTML and modern CSS layout techniques like Flexbox and Grid. This strengthened my ability to create accessible, adaptive user interfaces and solidified core front-end fundamentals.",
+  },
+  {
+    title: "2-Day Web Development Training",
+    description: "November 2021",
+    icon: <FaStarOfLife className="h-4 w-4 text-violet-500" />,
+    src: "https://res.cloudinary.com/kavin-crew/image/upload/v1768064351/portfolio-images/Nov-2021_cert_cstyh4.jpg",
+    content:
+      "Completed a 2-day intensive training focused on converting website designs into fully responsive, industry-standard websites using WordPress Divi. Gained hands-on experience translating UI layouts into optimized, mobile-friendly pages with real-world build practices.",
   },
 ];
