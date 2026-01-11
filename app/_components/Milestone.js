@@ -1,4 +1,5 @@
 import { ExpandableCardDemo } from "@/app/_components/Modal";
+import Card from "@/app/_components/Card";
 
 export default function Milestone() {
   return (
@@ -15,7 +16,7 @@ export default function Milestone() {
         Web Developer — from sharpening my skills to delivering real-world
         impact.
       </p>
-      <ExpandableCardDemo />
+      <Card />
     </section>
   );
 }

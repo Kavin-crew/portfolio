@@ -46,7 +46,7 @@ export function ExpandableCardDemo() {
       {/* pop-up */}
       <AnimatePresence>
         {active && typeof active === "object" ? (
-          <div className="fixed inset-0  grid place-items-center z-100">
+          <div className="fixed inset-0  grid place-items-center  z-100">
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
@@ -88,34 +88,29 @@ export function ExpandableCardDemo() {
         ) : null}
       </AnimatePresence>
       {/* layout in grid */}
-      <ul className="max-w-7xl mx-auto w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <ul className="w-full px-6 grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 md:grid-cols-3">
         {cardsAwards.map((card, index) => (
           <motion.li
             layoutId={`card-${card.title}-${id}`}
             key={`card-${card.title}-${id}`}
             onClick={() => setActive(card)}
-            className="flex flex-col p-4 md:flex-row justify-between items-center  rounded-xl cursor-pointer "
+            className="group relative flex flex-col items-start cursor-pointer min-w-full"
           >
-            <div className="flex gap-4 flex-col justify-center items-center w-full will-change-transform">
+            <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50"></div>
+            <div>
               <motion.div layoutId={`image-${card.title}-${id}`}>
-                <Image
-                  width={200}
-                  height={200}
-                  src={card.src}
-                  alt={card.title}
-                  className="w-full h-40 rounded-lg object-cover object-top"
-                />
+                {card.icon}
               </motion.div>
-              <div className="">
+              <div>
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
-                  className="font-medium text-neutral-800 dark:text-neutral-200 text-center"
+                  className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100 relative z-10"
                 >
                   {card.title}
                 </motion.h3>
                 <motion.p
                   layoutId={`description-${card.description}-${id}`}
-                  className="text-neutral-600 dark:text-neutral-400 text-center"
+                  className="relative z-10 text-neutral-600 dark:text-neutral-400 text-center md:text-left"
                 >
                   {card.description}
                 </motion.p>

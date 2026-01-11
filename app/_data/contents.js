@@ -6,6 +6,15 @@ import {
   PhoneIcon,
   TrophyIcon,
 } from "@heroicons/react/24/solid";
+import {
+  FaAward, // Classic award/badge icon
+  FaTrophy, // Trophy symbol
+  FaMedal, // Medal icon
+  FaCertificate, // Certificate / accomplishment document
+  FaStar, // Star (generic recognition)
+  FaStarHalfAlt, // Half star (optional rating)
+  FaStarOfLife, // Special star/importance
+} from "react-icons/fa";
 import HeadingSecondary from "@/app/_components/HeadingSecondary";
 import Paragraph from "@/app/_components/Paragraph";
 import { ThreeDMarquee } from "@/app/_components/ui//3d-marquee";
@@ -577,68 +586,52 @@ export const timelineData = [
 
 export const cardsAwards = [
   {
-    title: "Achievements from Yotpo",
-    imgHeight: "300",
-    imgWidth: "100",
+    title: "Top Performer",
+    description: "2024 - 2025",
+    icon: <FaAward className="h-4 w-4 text-violet-500" />,
     src: "https://res.cloudinary.com/kavin-crew/image/upload/v1768064350/portfolio-images/achievements-yotpo_y23f20.jpg",
-    content: () => {
-      return (
-        <p>
-          Grateful to Share a Milestone in My Yotpo Journey As I wrap up my time
-          at Yotpo, I wanted to take a moment to reflect on a chapter that truly
-          shaped me—not just as a developer, but as a professional. I recently
-          received a formal certification summarizing my performance rankings
-          throughout my entire tenure, and I’m incredibly proud and humbled to
-          share these
-        </p>
-      );
-    },
+    content:
+      "As I wrap up my time at Yotpo, I wanted to take a moment to reflect on a chapter that truly shaped me—not just as a developer, but as a professional. I recently received a formal certification summarizing my performance rankings throughout my entire tenure, and I’m incredibly proud and humbled to share these results",
   },
-
   {
-    title: "Top Performer - Nov. 2022",
-    imgHeight: "300",
-    imgWidth: "100",
+    title: "Top Performer",
+    description: "November 2022",
+    icon: <FaTrophy className="h-4 w-4 text-violet-500" />,
     src: "https://res.cloudinary.com/kavin-crew/image/upload/v1768064350/portfolio-images/Nov_-_2022_bllx54.jpg",
-    content: () => {
-      return <p>Recognation for February 2023</p>;
-    },
+    content:
+      "This award was presented to me for delivering the highest site conversion rate in alignment with KPI requirements.",
   },
   {
-    title: "Top Performer - Oct. 2022",
-    imgHeight: "400",
-    imgWidth: "100",
+    title: "Top Performer",
+    description: "October 2022",
+    icon: <FaTrophy className="h-4 w-4 text-violet-500" />,
     src: "https://res.cloudinary.com/kavin-crew/image/upload/v1768064350/portfolio-images/Oct_-_2022_cert_hxkx1b.jpg",
-    content: () => {
-      return <p>Recognation for February 2023</p>;
-    },
+    content:
+      "This award was presented to me for delivering the highest site conversion rate in alignment with KPI requirements.",
   },
   {
-    title: "WP Ace Developer Award - Feb. 2023",
-    imgHeight: "400",
-    imgWidth: "100",
+    title: "WordPress Ace Developer",
+    description: "February 2023",
+    icon: <FaMedal className="h-4 w-4 text-violet-500" />,
     src: "https://res.cloudinary.com/kavin-crew/image/upload/v1768064349/portfolio-images/Feb_2023_acpv33.jpg",
-    content: () => {
-      return <p>Recognation for February 2023</p>;
-    },
-  },
-  {
-    title: "WP Ace Developer Award - Sept. 2022",
-    imgHeight: "400",
-    imgWidth: "100",
-    src: "https://res.cloudinary.com/kavin-crew/image/upload/v1768064351/portfolio-images/Sept_2022_cd7uq8.jpg",
-    content: () => {
-      return <p>Recognation for February 2023</p>;
-    },
+    content:
+      "This award was presented to me for delivering the highest site conversion rate.",
   },
 
   {
-    title: "WP Ace Developer Award - Oct. 2022",
-    imgHeight: "400",
-    imgWidth: "100",
+    title: "WordPress Ace Developer",
+    description: "October 2022",
+    icon: <FaMedal className="h-4 w-4 text-violet-500" />,
     src: "https://res.cloudinary.com/kavin-crew/image/upload/v1768064350/portfolio-images/Oct_2022_mxtur9.jpg",
-    content: () => {
-      return <p>Recognation for February 2023</p>;
-    },
+    content:
+      "This award was presented to me for delivering the highest site conversion rate.",
+  },
+  {
+    title: "WordPress Ace Developer",
+    description: "September 2022",
+    icon: <FaMedal className="h-4 w-4 text-violet-500" />,
+    src: "https://res.cloudinary.com/kavin-crew/image/upload/v1768064351/portfolio-images/Sept_2022_cd7uq8.jpg",
+    content:
+      "This award was presented to me for delivering the highest site conversion rate.",
   },
 ];
