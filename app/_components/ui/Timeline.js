@@ -17,7 +17,7 @@ export const Timeline = () => {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 10%", "end 90%"],
+    offset: ["start 10%", "end 95%"],
   });
 
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
@@ -26,7 +26,7 @@ export const Timeline = () => {
   return (
     <section
       className="w-full bg-white dark:bg-neutral-950 md:px-10"
-      id="projects"
+      id="timeline"
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto pb-20 pt-20 px-4 md:px-8 lg:pb-32 lg:pt-32">

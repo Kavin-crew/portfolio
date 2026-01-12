@@ -7,6 +7,9 @@ import Link from "next/link";
 import { heroContent } from "@/app/_data/contents";
 import { AuroraBackground } from "@/app/_components/ui/AuroraBackground";
 import { BriefcaseIcon } from "@heroicons/react/24/solid";
+import HeadingPrimary from "@/app/_components/HeadingPrimary";
+import HeadingTertiary from "@/app/_components/HeadingTertiary";
+import Paragraph from "@/app/_components/Paragraph";
 
 export function Hero() {
   return (
@@ -30,23 +33,21 @@ export function Hero() {
             width={160}
             height={160}
           />
-          <h1 className="text-2xl font-bold mt-8 text-zinc-800 md:text-3xl dark:text-zinc-100">
+          <HeadingPrimary className="mt-8">
             Front-end development focused on clarity, speed, and business
             impact.
-          </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400 max-w-3xl">
+          </HeadingPrimary>
+          <Paragraph className="mt-6">
             I turn designs into polished, interactive web experiences. Built
             with attention to detail, performance, and real-world usability.
             Focused on creating interfaces users actually enjoy using.
-          </p>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            <BriefcaseIcon className="h-4 w-4 pb-0.5 mr-1 fill-zinc-500 inline-block" />
+          </Paragraph>
+          <Paragraph>
+            <BriefcaseIcon className="h-4 w-4 pb-0.5 mr-1 inline-block text-zinc-600 dark:text-zinc-400" />
             Available for: Full-Time • Part-Time • Freelance
-          </p>
-          <h3 className="mt-7 text-lg font-semibold text-zinc-800 dark:text-zinc-100">
-            Let&apos;s connect
-          </h3>
-          <div className="mt-3 flex gap-6">
+          </Paragraph>
+          <HeadingTertiary>Let&apos;s connect</HeadingTertiary>
+          <div className="mt-3 flex gap-6" aria-label="Social media">
             {heroContent.map((item, index) => (
               <Link
                 key={`hero-social-link-${index}`}

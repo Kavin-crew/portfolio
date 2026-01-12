@@ -401,22 +401,22 @@ export const workScreenshotWeaver = [
 export const navItems = [
   {
     name: "About",
-    link: "/",
+    link: "/about",
     icon: <HomeIcon className="h-4 w-4 via-violet-400 dark:text-white" />,
   },
   {
-    name: "Projects",
-    link: "#projects",
+    name: "Timeline",
+    link: "/timeline",
     icon: <UserIcon className="h-4 w-4 via-violet-400 dark:text-white" />,
   },
   {
-    name: "Milestone",
-    link: "#milestone",
+    name: "Achievements",
+    link: "/achievements",
     icon: <TrophyIcon className="h-4 w-4 via-violet-400 dark:text-white" />,
   },
   {
     name: "Contact",
-    link: "#contact",
+    link: "/contact",
     icon: <PhoneIcon className="h-4 w-4 via-violet-400 dark:text-white" />,
   },
 ];

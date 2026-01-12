@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import { NavbarDemo } from "@/app/_components/Navbar";
 import "./globals.css";
 
 const inter = Inter({
@@ -14,8 +15,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.className} antialiased h-full`}>
+        <NavbarDemo />
+        <main>{children}</main>
+      </body>
     </html>
   );
 }

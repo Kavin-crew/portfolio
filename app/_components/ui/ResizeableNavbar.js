@@ -85,23 +85,23 @@ export const NavItems = ({ items, className, onItemClick }) => {
       )}
     >
       {items.map((item, idx) => (
-        <Link
-          onMouseEnter={() => setHovered(idx)}
-          onClick={onItemClick}
-          className="relative text-zinc-600 hover:text-zinc-100 dark:text-neutral-300"
-          key={`link-${idx}`}
-          href={item.link}
-        >
+        <li key={`link-${idx}`} className="list-none relative">
           {hovered === idx && (
             <motion.div
               layoutId="hovered"
               className="absolute inset-0 h-full w-full rounded-full bg-violet-400 dark:bg-violet-300"
             />
           )}
-          <span className="relative inline-block px-4 py-2  z-20 transition-all duration-300">
-            {item.name}
-          </span>
-        </Link>
+          <Link
+            onMouseEnter={() => setHovered(idx)}
+            onClick={onItemClick}
+            className=" text-zinc-600 px-4 py-2 relative inline-block z-20 transition-all duration-300 hover:text-zinc-100 dark:text-neutral-300"
+            key={`link-${idx}`}
+            href={item.link}
+          >
+            <span className="transition-all duration-300">{item.name}</span>
+          </Link>
+        </li>
       ))}
     </motion.div>
   );
@@ -186,8 +186,8 @@ export const MobileNavToggle = ({ isOpen, onClick }) => {
 
 export const NavbarLogo = () => {
   return (
-    <a
-      href="#"
+    <Link
+      href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2  py-1 text-sm font-normal text-black"
     >
       <Image
@@ -197,7 +197,7 @@ export const NavbarLogo = () => {
         height={30}
       />
       <span className="font-medium text-black dark:text-white">Kavin A.</span>
-    </a>
+    </Link>
   );
 };
 
