@@ -1,7 +1,7 @@
 // Hero Social Links
-export const heroContent = [
+export const socialLinks = [
   {
-    socialLinks: "facebook",
+    socialLinks: "Facebook",
     link: "https://www.facebook.com/kavin.abregana.31",
     icon: (
       <svg
@@ -14,7 +14,7 @@ export const heroContent = [
     ),
   },
   {
-    socialLinks: "github",
+    socialLinks: "Github",
     link: "https://github.com/Kavin-crew/",
     icon: (
       <svg
@@ -31,7 +31,7 @@ export const heroContent = [
     ),
   },
   {
-    socialLinks: "linkedin",
+    socialLinks: "Linkedin",
     link: "https://www.linkedin.com/in/kavin-abregana/",
     icon: (
       <svg

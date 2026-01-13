@@ -1,10 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { heroContent } from "@/app/_data/heroContent";
+import { motion } from "framer-motion";
+import { socialLinks } from "@/app/_data/heroContent";
 import { AuroraBackground } from "@/app/_components/ui/AuroraBackground";
 import { BriefcaseIcon } from "@heroicons/react/24/solid";
 import HeadingPrimary from "@/app/_components/HeadingPrimary";
@@ -48,7 +48,7 @@ export function Hero() {
           </Paragraph>
           <HeadingTertiary>Let&apos;s connect</HeadingTertiary>
           <div className="mt-3 flex gap-6" aria-label="Social media">
-            {heroContent.map((item, index) => (
+            {socialLinks.map((item, index) => (
               <Link
                 key={`hero-social-link-${index}`}
                 href={item.link}

@@ -13,6 +13,7 @@ import {
 } from "@/app/_components/ui/ResizeableNavbar";
 import { useState } from "react";
 import { navItems } from "@/app/_data/navContent";
+import ThemeToggle from "@/app/_components/ThemeToggle";
 
 export function NavbarDemo() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -24,20 +25,20 @@ export function NavbarDemo() {
         <NavBody>
           <NavbarLogo />
           <NavItems items={navItems} />
-          <div className="flex items-center gap-4">
-            {/* <NavbarButton variant="secondary">Login</NavbarButton> */}
-            <NavbarButton variant="primary">Download Resume</NavbarButton>
-          </div>
+          <ThemeToggle />
         </NavBody>
 
         {/* Mobile Navigation */}
         <MobileNav>
           <MobileNavHeader>
             <NavbarLogo />
-            <MobileNavToggle
-              isOpen={isMobileMenuOpen}
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            />
+            <span className="flex items-center gap-4">
+              <ThemeToggle />
+              <MobileNavToggle
+                isOpen={isMobileMenuOpen}
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              />
+            </span>
           </MobileNavHeader>
 
           <MobileNavMenu

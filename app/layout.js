@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import { NavbarDemo } from "@/app/_components/Navbar";
+import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
 const inter = Inter({
@@ -15,10 +16,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html
+      lang="en"
+      className="scroll-smooth"
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+    >
       <body className={`${inter.className} antialiased h-full`}>
-        <NavbarDemo />
-        <main>{children}</main>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <NavbarDemo />
+          <main>{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );

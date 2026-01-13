@@ -66,9 +66,15 @@ SPACING SYSTEM
 128px → 32
 */
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #fff;
   --foreground: #52525c;
+}
+
+* {
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 @theme inline {
@@ -90,7 +96,7 @@ SPACING SYSTEM
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #18181b;
     --foreground: #ededed;
   }
 }
