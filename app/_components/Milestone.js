@@ -1,4 +1,7 @@
-import { cardsAwards, trainingCertifications } from "@/app/_data/contents";
+import {
+  cardsAwards,
+  trainingCertifications,
+} from "@/app/_data/achievementsContent";
 import Card from "@/app/_components/Card";
 
 export default function Milestone() {

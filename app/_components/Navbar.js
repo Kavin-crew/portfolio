@@ -12,7 +12,7 @@ import {
   MobileNavMenu,
 } from "@/app/_components/ui/ResizeableNavbar";
 import { useState } from "react";
-import { navItems } from "@/app/_data/contents";
+import { navItems } from "@/app/_data/navContent";
 
 export function NavbarDemo() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

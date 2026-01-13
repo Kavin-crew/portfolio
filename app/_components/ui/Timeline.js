@@ -1,7 +1,7 @@
 "use client";
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
-import { timelineData } from "@/app/_data/contents";
+import { timelineData } from "@/app/_data/timelineContent";
 
 export const Timeline = () => {
   const ref = useRef(null);

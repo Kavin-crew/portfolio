@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { heroContent } from "@/app/_data/contents";
+import { heroContent } from "@/app/_data/heroContent";
 import { AuroraBackground } from "@/app/_components/ui/AuroraBackground";
 import { BriefcaseIcon } from "@heroicons/react/24/solid";
 import HeadingPrimary from "@/app/_components/HeadingPrimary";
