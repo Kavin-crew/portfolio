@@ -456,7 +456,7 @@ export const timelineData = [
     content: (
       <div key="2022">
         <h2 className="mb-8 text-xl md:text-1xl font-bold text-zinc-800 dark:text-zinc-100 ">
-          Freelance Web Developer Web Developer ll
+          Web Developer ll
           <Link href="https://www.proweaver.com/" target="_blank">
             <span className="text-violet-400 dark:text-via-violet-300">
               {" "}
