@@ -8,13 +8,13 @@ import { socialLinks } from "@/app/_data/heroContent";
 import { AuroraBackground } from "@/app/_components/ui/AuroraBackground";
 import { BriefcaseIcon } from "@heroicons/react/24/solid";
 import HeadingPrimary from "@/app/_components/HeadingPrimary";
-import HeadingTertiary from "@/app/_components/HeadingTertiary";
+import HeadingQuaternary from "@/app/_components/HeadingTertiary";
 import Paragraph from "@/app/_components/Paragraph";
 
 export function Hero() {
   return (
     <AuroraBackground>
-      <motion.div
+      <motion.section
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
@@ -23,7 +23,7 @@ export function Hero() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="relative flex flex-col gap-4 items-center justify-center px-4 "
+        className="relative flex flex-col gap-4 items-center justify-center px-4 pt-32"
       >
         <div className="flex justify-center items-center flex-col max-w-7xl text-center px-0 md:px-8 lg:px-10">
           <Image
@@ -43,10 +43,10 @@ export function Hero() {
             Focused on creating interfaces users actually enjoy using.
           </Paragraph>
           <Paragraph>
-            <BriefcaseIcon className="h-4 w-4 pb-0.5 mr-1 inline-block text-zinc-600 dark:text-zinc-400" />
+            <BriefcaseIcon className="h-4 w-4 mr-1 -translate-y-0.5 inline-block fill-violet-600 dark:fill-violet-500" />
             Available for: Full-Time • Part-Time • Freelance
           </Paragraph>
-          <HeadingTertiary>Let&apos;s connect</HeadingTertiary>
+          <HeadingQuaternary>Let&apos;s connect</HeadingQuaternary>
           <div className="mt-3 flex gap-6" aria-label="Social media">
             {socialLinks.map((item, index) => (
               <Link
@@ -61,7 +61,7 @@ export function Hero() {
             ))}
           </div>
         </div>
-      </motion.div>
+      </motion.section>
     </AuroraBackground>
   );
 }

@@ -2,6 +2,8 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { timelineData } from "@/app/_data/timelineContent";
+import HeadingSecondary from "@/app/_components/HeadingSecondary";
+import Paragraph from "@/app/_components/Paragraph";
 
 export const Timeline = () => {
   const ref = useRef(null);
@@ -29,15 +31,13 @@ export const Timeline = () => {
       id="timeline"
       ref={containerRef}
     >
-      <div className="max-w-7xl mx-auto pb-20 pt-20 px-4 md:px-8 lg:pb-32 lg:pt-32">
-        <h2 className="text-2xl font-bold text-zinc-800 md:text-3xl dark:text-zinc-100">
-          Changelog from my career
-        </h2>
-        <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400 md:text-base max-w-4xl">
+      <div className="max-w-7xl mx-auto pb-12 pt-32 px-4 md:px-8">
+        <HeadingSecondary>Changelog from my career</HeadingSecondary>
+        <Paragraph className="mt-6 mb-0 max-w-4xl">
           I&apos;ve been crafting modern, responsive, and accessible web
           interfaces as a Front-End Web Developer. Below is a timeline of the
           projects, roles, and milestones that define my career.
-        </p>
+        </Paragraph>
       </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20 lg:pb-32">
@@ -50,13 +50,15 @@ export const Timeline = () => {
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
               </div>
-              <h3 className="hidden md:block text-xl md:text-1xl md:pl-20 font-bold text-neutral-500 dark:text-neutral-500 ">
+              {/* desktop */}
+              <h3 className="hidden md:block text-lg md:pl-20 font-bold text-neutral-500 dark:text-neutral-500 ">
                 {item.title}
               </h3>
             </div>
 
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
-              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
+              {/* mobile */}
+              <h3 className="md:hidden block text-lg mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
                 {item.title}
               </h3>
               {item.content}{" "}

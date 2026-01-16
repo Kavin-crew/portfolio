@@ -4,6 +4,9 @@ import Image from "next/image";
 import { useState, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/app/_hooks/useOutsideClick";
+import HeadingQuaternary from "@/app/_components/HeadingQuaternary";
+import HeadingTertiary from "@/app/_components/HeadingTertiary";
+import Paragraph from "@/app/_components/Paragraph";
 
 export default function Card({ cardsContent }) {
   const [activeCard, setActiveCard] = useState(null);
@@ -13,10 +16,10 @@ export default function Card({ cardsContent }) {
 
   return (
     <>
-      <ul className="w-full mt-15 grid  gap-x-12 gap-y-16 grid-cols-1 md:gap-x-6 sm:grid-cols-2 md:gap-y-9 md:grid-cols-3 lg:grid-cols-4">
+      <ul className="w-full mt-15 grid  gap-x-12 gap-y-8 grid-cols-1 md:gap-x-6 sm:grid-cols-2 sm:gap-y-16 md:gap-y-9 md:grid-cols-3 lg:grid-cols-4">
         {cardsContent.map((card, index) => (
           <li
-            className="group relative flex flex-col px-8 py-6 items-center sm:items-start rounded-lg cursor-pointer min-w-full hover:bg-zinc-50 hover:dark:bg-zinc-800/50 transition-colors duration-300 ease-linear"
+            className="group relative flex flex-col px-2 py-2 items-center sm:px-8 sm:py-6 sm:items-start rounded-lg cursor-pointer min-w-full hover:bg-zinc-50 hover:dark:bg-zinc-800/50 transition-colors duration-300 ease-linear"
             key={`card-${card.title}-${index}`}
             onClick={() => setActiveCard(card)}
           >
@@ -24,12 +27,12 @@ export default function Card({ cardsContent }) {
               {card.icon}
             </span>
             <div>
-              <h3 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100 relative z-10 text-center sm:text-left">
+              <HeadingQuaternary className="mt-6 relative z-10 text-center sm:text-left">
                 {card.title}
-              </h3>
-              <p className="relative z-10 text-neutral-600 dark:text-neutral-400 text-center sm:text-left">
+              </HeadingQuaternary>
+              <Paragraph className="relative z-10 text-center sm:text-left">
                 {card.description}
-              </p>
+              </Paragraph>
             </div>
           </li>
         ))}
@@ -63,7 +66,7 @@ export default function Card({ cardsContent }) {
               {/* Close Button */}
               <button
                 onClick={() => setActiveCard(null)}
-                className="absolute top-4 right-4 z-10 flex items-center justify-center w-7 h-7 cursor-pointer  bg-violet-500 dark:bg-gray-700 hover:bg-violet-400 dark:hover:bg-gray-600 rounded-full transition-colors duration-300 ease-linear"
+                className="absolute top-4 right-4 z-10 flex items-center justify-center w-7 h-7 cursor-pointer bg-violet-600 dark:bg-gray-700 hover:bg-violet-700 dark:hover:bg-gray-600 rounded-full transition-colors duration-300 ease-linear"
                 aria-label="Close modal"
               >
                 <svg
@@ -97,12 +100,10 @@ export default function Card({ cardsContent }) {
 
               {/* Content */}
               <div className="p-6">
-                <h2 className="text-lg font-semibold text-zinc-800 dark:text-zinc-100 mb-3">
+                <HeadingTertiary className="mb-3">
                   {activeCard.title}
-                </h2>
-                <p className="text-base text-zinc-600 dark:text-zinc-400">
-                  {activeCard.content}
-                </p>
+                </HeadingTertiary>
+                <Paragraph>{activeCard.content}</Paragraph>
               </div>
             </motion.div>
           </div>

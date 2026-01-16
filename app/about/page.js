@@ -1,14 +1,12 @@
-import HeadingPrimary from "@/app/_components/HeadingPrimary";
-import HeadingSecondary from "@/app/_components/HeadingSecondary";
-import Paragraph from "@/app/_components/Paragraph";
 import Image from "next/image";
 import { aboutContent } from "@/app/_data/aboutContent";
 import { socialLinks } from "@/app/_data/heroContent";
+import { EnvelopeIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <section className="relative min-h-dvh w-full bg-white dark:bg-neutral-950 pb-20 pt-20 px-4 md:px-10 lg:pb-32 lg:pt-32">
+    <section className="relative min-h-dvh w-full bg-white dark:bg-neutral-950 pb-20 pt-32 px-4 md:px-10 lg:pb-32">
       <div className="max-w-7xl mx-auto pb-20 px-4 md:px-8">
         <div>
           <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-[1fr_25rem] lg:grid-rows-[auto_1fr] lg:gap-y-12">
@@ -35,7 +33,7 @@ export default function AboutPage() {
                 {socialLinks.map((link) => (
                   <li key={link.socialLinks} className="mt-4 flex">
                     <Link
-                      className="group flex text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-violet-500 dark:hover:text-violet-400"
+                      className="group flex text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-violet-400 dark:hover:text-violet-300"
                       href={link.link}
                     >
                       {link.icon}
@@ -54,7 +52,7 @@ export default function AboutPage() {
                   <svg
                     viewBox="0 0 24 24"
                     aria-hidden="true"
-                    className="h-6 w-6 flex-none fill-violet-500 transition group-hover:fill-violet-400 dark:fill-violet-300 dark:group-hover:fill-violet-200"
+                    className="h-6 w-6 flex-none fill-violet-600 transition group-hover:fill-violet-700 dark:fill-violet-200 dark:group-hover:fill-violet-100 duration-300"
                   >
                     <path
                       fillRule="evenodd"

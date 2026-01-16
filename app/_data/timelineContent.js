@@ -1,5 +1,6 @@
 import Link from "next/link";
 import HeadingSecondary from "@/app/_components/HeadingSecondary";
+import HeadingTertiary from "@/app/_components/HeadingTertiary";
 import Paragraph from "@/app/_components/Paragraph";
 import { ThreeDMarquee } from "@/app/_components/ui//3d-marquee";
 
@@ -387,7 +388,9 @@ export const timelineData = [
     title: "Dec 2025 - Present",
     content: (
       <div key="2026">
-        <HeadingSecondary>Freelance Web Developer</HeadingSecondary>
+        <h2 className="mb-8 text-xl md:text-1xl font-bold text-zinc-800 dark:text-zinc-100 ">
+          Freelance Web Developer
+        </h2>
         <Paragraph>
           I build and maintain WordPress websites using Elementor, supported by
           hands-on coding experience in HTML, CSS, and JavaScript. My recent
@@ -404,7 +407,7 @@ export const timelineData = [
     title: "Mar 2024 - Jan 2026",
     content: (
       <div key="2024">
-        <HeadingSecondary>
+        <h2 className="mb-8 text-xl md:text-1xl font-bold text-zinc-800 dark:text-zinc-100 ">
           Web Customization Developer
           <Link href="https://www.yotpo.com/" target="_blank">
             <span className="text-violet-400 dark:text-via-violet-300">
@@ -412,7 +415,7 @@ export const timelineData = [
               @ Yotpo
             </span>
           </Link>
-        </HeadingSecondary>
+        </h2>
         <Paragraph>
           In my role as a Customizations UGC Developer, I design, develop, and
           implement customized web components that enhance client websites and
@@ -439,6 +442,11 @@ export const timelineData = [
         <h3 className="text-lg font-semibold mb-5 text-zinc-800 dark:text-zinc-100">
           Career Highlights
         </h3>
+        <Paragraph>
+          A selection of impactful projects I contributed to during my tenure,
+          demonstrating my ability to turn requirements into polished,
+          user-focused web experiences.
+        </Paragraph>
         <ThreeDMarquee items={workScreenshot} />
       </div>
     ),
@@ -447,15 +455,15 @@ export const timelineData = [
     title: "Feb 2022 - Jan 2024",
     content: (
       <div key="2022">
-        <HeadingSecondary>
-          Web Developer ll
+        <h2 className="mb-8 text-xl md:text-1xl font-bold text-zinc-800 dark:text-zinc-100 ">
+          Freelance Web Developer Web Developer ll
           <Link href="https://www.proweaver.com/" target="_blank">
             <span className="text-violet-400 dark:text-via-violet-300">
               {" "}
               @ Proweaver
             </span>
           </Link>
-        </HeadingSecondary>
+        </h2>
         <Paragraph>
           I create website pages based on provided design layouts while ensuring
           the continuous upkeep and improvement of existing sites. I accurately
@@ -467,6 +475,11 @@ export const timelineData = [
         <h3 className="text-lg font-semibold mb-5 text-zinc-800 dark:text-zinc-100">
           Career Highlights
         </h3>
+        <Paragraph>
+          This section features the projects that defined my journey within the
+          company—highlighting challenges solved, skills refined, and
+          contributions to products used by real users.
+        </Paragraph>
         <ThreeDMarquee items={workScreenshotWeaver} />
       </div>
     ),
@@ -475,7 +488,7 @@ export const timelineData = [
     title: "Nov 2017 - Mar 2022",
     content: (
       <div key="2017">
-        <HeadingSecondary>
+        <h2 className="mb-8 text-xl md:text-1xl font-bold text-zinc-800 dark:text-zinc-100 ">
           Informatics Analyst l
           <Link
             href="https://www.linkedin.com/company/pmaxglobal"
@@ -486,7 +499,7 @@ export const timelineData = [
               @ PMAXGlobal Philippines
             </span>
           </Link>
-        </HeadingSecondary>
+        </h2>
         <Paragraph>
           Collected medical documents from various EHR systems and managed
           insurance-related requests while ensuring accuracy through data review

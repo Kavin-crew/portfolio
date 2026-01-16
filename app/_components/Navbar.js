@@ -50,9 +50,10 @@ export function NavbarDemo() {
                 key={`mobile-link-${idx}`}
                 href={item.link}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="relative text-neutral-600 dark:text-neutral-300"
+                className="relative text-neutral-600 dark:text-neutral-300 flex items-center gap-4 px-4 py-2 hover:bg-neutral-200 dark:hover:bg-neutral-800 rounded-md transition-colors"
               >
-                <span className="block">{item.name}</span>
+                <span className="inline-block">{item.icon}</span>
+                <span className="inline-block">{item.name}</span>
               </Link>
             ))}
             <div className="flex w-full flex-col gap-4">

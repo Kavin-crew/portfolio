@@ -18,14 +18,13 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className="scroll-smooth"
-      data-scroll-behavior="smooth"
+      className="overflow-y-scroll scroll-smooth"
       suppressHydrationWarning
     >
-      <body className={`${inter.className} antialiased h-full`}>
+      <body className={`${inter.className} antialiased min-h-screen`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NavbarDemo />
-          <main>{children}</main>
+          <main className="w-full">{children}</main>
         </ThemeProvider>
       </body>
     </html>
