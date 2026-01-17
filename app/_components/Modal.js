@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/app/_hooks/useOutsideClick";
-import { cardsAwards } from "@/app/_data/contents";
+import { cardsAwards } from "@/app/_data/achievementsContent";
 
 export function ExpandableCardDemo() {
   const [active, setActive] = useState(null);

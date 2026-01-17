@@ -73,9 +73,9 @@ SPACING SYSTEM
   --foreground: #52525c;
 }
 
-* {
+/* * {
   transition: background-color 0.2s ease, color 0.2s ease;
-}
+} */
 
 @theme inline {
   --color-background: var(--background);

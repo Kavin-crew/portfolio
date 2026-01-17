@@ -12,7 +12,7 @@ import Link from "next/link";
 
 import React, { useRef, useState } from "react";
 
-export const Navbar = ({ children, className }) => {
+export function Navbar({ children, className }) {
   const ref = useRef(null);
   const { scrollY } = useScroll({
     target: ref,
@@ -41,9 +41,9 @@ export const Navbar = ({ children, className }) => {
       )}
     </motion.div>
   );
-};
+}
 
-export const NavBody = ({ children, className, visible }) => {
+export function NavBody({ children, className, visible }) {
   return (
     <motion.nav
       animate={{
@@ -71,9 +71,9 @@ export const NavBody = ({ children, className, visible }) => {
       {children}
     </motion.nav>
   );
-};
+}
 
-export const NavItems = ({ items, className, onItemClick }) => {
+export function NavItems({ items, className, onItemClick }) {
   const [hovered, setHovered] = useState(null);
 
   return (
@@ -99,15 +99,15 @@ export const NavItems = ({ items, className, onItemClick }) => {
             key={`link-${idx}`}
             href={item.link}
           >
-            <span className="transition-all duration-300">{item.name}</span>
+            <span className="transition-all duration-100">{item.name}</span>
           </Link>
         </li>
       ))}
     </motion.div>
   );
-};
+}
 
-export const MobileNav = ({ children, className, visible }) => {
+export function MobileNav({ children, className, visible }) {
   return (
     <motion.div
       animate={{
@@ -116,10 +116,10 @@ export const MobileNav = ({ children, className, visible }) => {
           ? "0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset"
           : "none",
         width: visible ? "90%" : "100%",
-        paddingRight: visible ? "12px" : "0px",
-        paddingLeft: visible ? "12px" : "0px",
+        paddingRight: visible ? "10px" : "0px",
+        paddingLeft: visible ? "10px" : "0px",
         borderRadius: visible ? "100px" : "2rem",
-        y: visible ? 20 : 0,
+        y: visible ? 10 : 0,
       }}
       transition={{
         type: "spring",
@@ -135,22 +135,9 @@ export const MobileNav = ({ children, className, visible }) => {
       {children}
     </motion.div>
   );
-};
+}
 
-export const MobileNavHeader = ({ children, className }) => {
-  return (
-    <div
-      className={cn(
-        "flex w-full flex-row items-center justify-between pr-2",
-        className
-      )}
-    >
-      {children}
-    </div>
-  );
-};
-
-export const MobileNavMenu = ({ children, className, isOpen, onClose }) => {
+export function MobileNavMenu({ children, className, isOpen, onClose }) {
   return (
     <AnimatePresence>
       {isOpen && (
@@ -168,9 +155,9 @@ export const MobileNavMenu = ({ children, className, isOpen, onClose }) => {
       )}
     </AnimatePresence>
   );
-};
+}
 
-export const MobileNavToggle = ({ isOpen, onClick }) => {
+export function MobileNavToggle({ isOpen, onClick }) {
   return isOpen ? (
     <XMarkIcon
       className="text-black dark:text-white w-6 h-6"
@@ -182,13 +169,13 @@ export const MobileNavToggle = ({ isOpen, onClick }) => {
       onClick={onClick}
     />
   );
-};
+}
 
-export const NavbarLogo = () => {
+export function NavbarLogo() {
   return (
     <Link
       href="/"
-      className="relative z-20 mr-4 flex items-center space-x-2 px-2  py-1 text-sm font-normal text-black"
+      className="relative z-20 mr-4 flex items-center space-x-2 pr-2 pl-2 lg:pl-0 py-1 text-sm font-normal text-zinc-600 hover:text-zinc-100 dark:text-neutral-300"
     >
       <Image
         src="https://avatars.githubusercontent.com/u/129659804?v=4"
@@ -196,8 +183,23 @@ export const NavbarLogo = () => {
         width={30}
         height={30}
       />
-      <span className="font-medium text-black dark:text-white">Kavin A.</span>
+      <span className="font-medium text-zinc-600 dark:text-neutral-300">
+        Kavin A.
+      </span>
     </Link>
+  );
+}
+
+export const MobileNavHeader = ({ children, className }) => {
+  return (
+    <div
+      className={cn(
+        "flex w-full flex-row items-center justify-between pr-2",
+        className
+      )}
+    >
+      {children}
+    </div>
   );
 };
 
