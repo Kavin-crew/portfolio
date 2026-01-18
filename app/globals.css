@@ -86,10 +86,14 @@ SPACING SYSTEM
   --animate-aurora: aurora 60s linear infinite;
   @keyframes aurora {
     from {
-      background-position: 50% 50%, 50% 50%;
+      background-position:
+        50% 50%,
+        50% 50%;
     }
     to {
-      background-position: 350% 50%, 350% 50%;
+      background-position:
+        350% 50%,
+        350% 50%;
     }
   }
 
@@ -113,6 +117,19 @@ SPACING SYSTEM
   :root {
     --background: #18181b;
     --foreground: #ededed;
+  }
+}
+@layer utilities {
+  .icon-filter {
+    filter: brightness(0) saturate(100%) invert(16%) sepia(78%) saturate(7301%)
+      hue-rotate(270deg) brightness(86%) contrast(116%);
+    transition: 100ms;
+  }
+
+  .dark .icon-filter {
+    filter: brightness(0) saturate(100%) invert(78%) sepia(17%) saturate(654%)
+      hue-rotate(206deg) brightness(107%) contrast(101%);
+    transition: 100ms;
   }
 }
 

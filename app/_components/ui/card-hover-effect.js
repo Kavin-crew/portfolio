@@ -19,10 +19,11 @@ export function HoverEffect({ items, className }) {
       {items.map((item, idx) => (
         <Link
           href={item?.link}
-          key={item?.link}
+          key={item.title + idx}
           className="relative group  block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
+          target="_blank"
         >
           <AnimatePresence>
             {hoveredIndex === idx && (
@@ -41,37 +42,55 @@ export function HoverEffect({ items, className }) {
               />
             )}
           </AnimatePresence>
-          <Card>
+          <div className="bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 rounded-2xl h-full w-full p-4 overflow-hidden border border-transparent relative z-20">
             <span className="relative z-10 mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
               {item?.logo}
             </span>
-            <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
-          </Card>
+            <HeadingQuaternary>{item.title}</HeadingQuaternary>
+            <Paragraph>{item.description}</Paragraph>
+            {item?.icons && (
+              <div className="flex gap-2 mt-4">
+                {item.icons.map((iconItem, iconIdx) => (
+                  <IconTooltip
+                    key={iconItem.name || iconIdx}
+                    name={iconItem.name}
+                  >
+                    <span>{iconItem.icon}</span>
+                  </IconTooltip>
+                ))}
+              </div>
+            )}
+          </div>
         </Link>
       ))}
     </div>
   );
 }
 
-export function Card({ className, children }) {
+function IconTooltip({ children, name }) {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <div
-      className={cn(
-        " bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 rounded-2xl h-full w-full p-4 overflow-hidden border border-transparent relative z-20",
-        className,
-      )}
+      className="relative inline-block"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative z-50">
-        <div className="p-4">{children}</div>
-      </div>
+      {children}
+      <AnimatePresence>
+        {isHovered && (
+          <motion.div
+            initial={{ opacity: 0, y: 5, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 5, scale: 0.95 }}
+            transition={{ duration: 0.15 }}
+            className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs font-medium text-white bg-zinc-900 dark:bg-zinc-700 rounded-md whitespace-nowrap pointer-events-none z-50 shadow-lg"
+          >
+            {name}
+            <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-zinc-900 dark:border-t-zinc-700" />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
-
-export function CardTitle({ className, children }) {
-  return <HeadingQuaternary>{children}</HeadingQuaternary>;
-}
-export const CardDescription = ({ className, children }) => {
-  return <Paragraph> {children}</Paragraph>;
-};
