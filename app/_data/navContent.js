@@ -24,17 +24,17 @@ export const navItems = [
     ),
   },
   {
-    name: "Projects",
-    link: "/projects",
-    icon: (
-      <CodeBracketIcon className="h-4 w-4 text-violet-600 transition group-hover:fill-violet-700 dark:fill-violet-200 dark:group-hover:fill-violet-100 duration-300" />
-    ),
-  },
-  {
     name: "Achievements",
     link: "/achievements",
     icon: (
       <TrophyIcon className="h-4 w-4 text-violet-600 transition group-hover:fill-violet-700 dark:fill-violet-200 dark:group-hover:fill-violet-100 duration-300" />
+    ),
+  },
+  {
+    name: "Projects",
+    link: "/projects",
+    icon: (
+      <CodeBracketIcon className="h-4 w-4 text-violet-600 transition group-hover:fill-violet-700 dark:fill-violet-200 dark:group-hover:fill-violet-100 duration-300" />
     ),
   },
   {
