@@ -160,7 +160,7 @@ export const projectsContent = [
   },
   {
     title: "Mapty",
-    link: "https://kfa-today-i-learned.netlify.app/",
+    link: "https://kavin-crew.github.io/kfa-mapty/",
     githublink: "https://github.com/Kavin-crew/kfa-mapty",
     description:
       "App that tracks workouts on an interactive map using geolocation and local storage.",
@@ -219,7 +219,7 @@ export const projectsContent = [
     link: "https://kavin-crew.github.io/kfa-bankist/",
     githublink: "https://github.com/Kavin-crew/kfa-bankist",
     description:
-      "A practice landing page implementing modern JavaScript features and smooth, interactive user experiences.",
+      "A landing page implementing modern JavaScript features and smooth, interactive user experiences.",
     logo: (
       <Image
         src="/bankist.png"
@@ -247,7 +247,7 @@ export const projectsContent = [
   {
     title: "Omnifood",
     link: "https://kavin-crew.github.io/omnifood-by-jonas/",
-    githublink: "https://github.com/Kavin-crew/kfa-bankist",
+    githublink: "https://github.com/Kavin-crew/omnifood-by-jonas",
     description:
       "Responsive website promoting healthy meal plans and subscriptions.",
     logo: (
