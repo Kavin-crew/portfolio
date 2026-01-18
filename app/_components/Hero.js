@@ -8,7 +8,7 @@ import { socialLinks } from "@/app/_data/heroContent";
 import { AuroraBackground } from "@/app/_components/ui/AuroraBackground";
 import { BriefcaseIcon } from "@heroicons/react/24/solid";
 import HeadingPrimary from "@/app/_components/HeadingPrimary";
-import HeadingQuaternary from "@/app/_components/HeadingQuaternary";
+import HeadingQuaternary from "@/app/_components/HeadingTertiary";
 import Paragraph from "@/app/_components/Paragraph";
 
 export function Hero() {
