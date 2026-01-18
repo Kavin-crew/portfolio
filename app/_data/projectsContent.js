@@ -215,6 +215,36 @@ export const projectsContent = [
     ],
   },
   {
+    title: "Bankist - Landing Page",
+    link: "https://kavin-crew.github.io/kfa-bankist/",
+    githublink: "https://github.com/Kavin-crew/kfa-bankist",
+    description:
+      "A practice landing page implementing modern JavaScript features and smooth, interactive user experiences.",
+    logo: (
+      <Image
+        src="/bankist.png"
+        alt="Bankist Logo"
+        width={26}
+        height={26}
+        className="aspect-square object-contain"
+      />
+    ),
+    icons: [
+      {
+        name: "HTML",
+        icon: ICONS.html,
+      },
+      {
+        name: "CSS",
+        icon: ICONS.css,
+      },
+      {
+        name: "JavaScript",
+        icon: ICONS.javascript,
+      },
+    ],
+  },
+  {
     title: "Omnifood",
     link: "https://kavin-crew.github.io/omnifood-by-jonas/",
     githublink: "https://github.com/Kavin-crew/kfa-bankist",
