@@ -31,13 +31,19 @@ Tint/Lighter:
 Shade/Darker:
 Accent color:
 Grey color: 
+
 Heading - #2a2627 - text-zinc-800
 text - #52525c - text-zinc-600
+icon: fill-violet-600
+      group-hover:fill-violet-700
 
 Dark mode:
-Grey color:
 Heading - #f5f4f4 - text-zinc-100
 text - #9f9fa9 - text-zinc-400
+icon: fill-violet-500
+      group-hover:fill-violet-600
+
+Grey color:
 
 --SHADOWS
 box-shadow: 
@@ -127,9 +133,12 @@ SPACING SYSTEM
   }
 
   .dark .icon-filter {
-    filter: brightness(0) saturate(100%) invert(78%) sepia(17%) saturate(654%)
-      hue-rotate(206deg) brightness(107%) contrast(101%);
-    transition: 100ms;
+    filter: brightness(0) saturate(100%) invert(63%) sepia(30%) saturate(7076%)
+      hue-rotate(220deg) brightness(105%) contrast(101%);
+  }
+  .dark .icon-filter:hover {
+    filter: brightness(0) saturate(100%) invert(35%) sepia(88%) saturate(3384%)
+      hue-rotate(244deg) brightness(104%) contrast(101%);
   }
 }
 

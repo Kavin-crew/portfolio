@@ -66,7 +66,7 @@ export default function Card({ cardsContent }) {
               {/* Close Button */}
               <button
                 onClick={() => setActiveCard(null)}
-                className="absolute top-4 right-4 z-10 flex items-center justify-center w-7 h-7 cursor-pointer bg-violet-600 dark:bg-gray-700 hover:bg-violet-700 dark:hover:bg-gray-600 rounded-full transition-colors duration-300 ease-linear"
+                className="absolute top-4 right-4 z-10 flex items-center justify-center w-7 h-7 cursor-pointer bg-violet-600 dark:bg-violet-500 hover:bg-violet-700 dark:hover:bg-violet-600 rounded-full transition-colors duration-300 ease-linear"
                 aria-label="Close modal"
               >
                 <svg
@@ -79,7 +79,7 @@ export default function Card({ cardsContent }) {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="text-white dark:text-gray-700"
+                  className="text-zinc-100"
                 >
                   <path d="M18 6l-12 12" />
                   <path d="M6 6l12 12" />

@@ -6,7 +6,7 @@ import { IoLogoJavascript } from "react-icons/io5";
 import Image from "next/image";
 
 const iconClass =
-  "h-6 w-6 fill-violet-600 transition group-hover:fill-violet-700 dark:fill-violet-300 dark:group-hover:fill-violet-200";
+  "h-6 w-6 fill-violet-600 transition hover:fill-violet-700 dark:fill-violet-400 dark:hover:fill-violet-500";
 
 export const ICONS = {
   vercel: <IoLogoVercel className={iconClass} />,
@@ -95,7 +95,15 @@ export const projectsContent = [
     link: "https://www.g-up.report/",
     githublink: "https://github.com/Kavin-crew/g-up",
     description: "Research project for Gcash user monitoring",
-    logo: <Image src="/g-up-logo.png" alt="G-UP" width={26} height={26} />,
+    logo: (
+      <Image
+        src="/g-up-logo.png"
+        alt="G-UP"
+        width={26}
+        height={26}
+        className="w-auto h-auto"
+      />
+    ),
     icons: [
       {
         name: "Vercel",
@@ -117,7 +125,15 @@ export const projectsContent = [
     githublink: "https://github.com/Kavin-crew/kfa-forktify",
     description:
       "JavaScript-based recipe application that lets users search, view, and bookmark recipes using data from a public API.",
-    logo: <Image src="/forkify.png" alt="Forkify" width={26} height={26} />,
+    logo: (
+      <Image
+        src="/forkify.png"
+        alt="Forkify"
+        className="rounded-full overflow-hidden"
+        width={26}
+        height={26}
+      />
+    ),
     icons: [
       {
         name: "SCSS",
@@ -170,7 +186,7 @@ export const projectsContent = [
         alt="Mapty Logo"
         width={26}
         height={26}
-        className="aspect-square object-contain"
+        className="w-auto h-auto aspect-square object-contain bg-white rounded-full py-1"
       />
     ),
     icons: [

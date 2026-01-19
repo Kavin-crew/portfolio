@@ -43,7 +43,7 @@ export function HoverEffect({ items, className }) {
           </AnimatePresence>
           <div className="grid grid-rows-[1fr_40px_44px] bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 rounded-2xl h-full w-full p-4 overflow-hidden border border-transparent relative z-20">
             <Link href={item?.link} target="_blank">
-              <span className="relative z-10 mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+              <span className="relative z-10 mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 overflow-hidden">
                 {item?.logo}
               </span>
               <HeadingQuaternary>{item.title}</HeadingQuaternary>
@@ -63,10 +63,10 @@ export function HoverEffect({ items, className }) {
             )}
             <Link
               href={item.githublink}
-              className="flex items-center gap-2 mt-5 pl-1"
+              className="flex items-center gap-2 mt-5 pl-1 dark:text-zinc-400 dark:hover:text-zinc-300"
               target="_blank"
             >
-              <FaCodeFork className="h-4 w-4 fill-violet-600 transition group-hover:fill-violet-700 dark:fill-violet-300 dark:group-hover:fill-violet-200" />
+              <FaCodeFork className="h-4 w-4 fill-violet-600 transition group-hover:fill-violet-700 dark:fill-violet-400 dark:group-hover:fill-violet-500" />
               View on Github
             </Link>
           </div>

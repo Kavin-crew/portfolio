@@ -21,7 +21,7 @@ export function Navbar({ children, className }) {
   const [visible, setVisible] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    if (latest > 100) {
+    if (latest > 50) {
       setVisible(true);
     } else {
       setVisible(false);
@@ -37,7 +37,7 @@ export function Navbar({ children, className }) {
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
           ? React.cloneElement(child, { visible })
-          : child
+          : child,
       )}
     </motion.div>
   );
@@ -64,8 +64,8 @@ export function NavBody({ children, className, visible }) {
       }}
       className={cn(
         "relative z-60 mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent",
-        visible && "bg-white/80 dark:bg-neutral-950/80",
-        className
+        visible && "bg-white/50 dark:bg-neutral-950/50",
+        className,
       )}
     >
       {children}
@@ -81,7 +81,7 @@ export function NavItems({ items, className, onItemClick }) {
       onMouseLeave={() => setHovered(null)}
       className={cn(
         "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
-        className
+        className,
       )}
     >
       {items.map((item, idx) => (
@@ -95,11 +95,11 @@ export function NavItems({ items, className, onItemClick }) {
           <Link
             onMouseEnter={() => setHovered(idx)}
             onClick={onItemClick}
-            className=" text-zinc-600 px-4 py-2 relative inline-block z-20 transition-all duration-300 hover:text-zinc-100 dark:text-neutral-300"
+            className=" text-zinc-600 px-4 py-2 relative inline-block z-20 transition-all duration-300 hover:text-zinc-100 dark:text-neutral-200 hover:dark:text-neutral-900 pointer-events-auto"
             key={`link-${idx}`}
             href={item.link}
           >
-            <span className="transition-all duration-100">{item.name}</span>
+            <span className="transition-all duration-400">{item.name}</span>
           </Link>
         </li>
       ))}
@@ -129,7 +129,7 @@ export function MobileNav({ children, className, visible }) {
       className={cn(
         "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-0 py-2 lg:hidden",
         visible && "bg-white/80 dark:bg-neutral-950/80",
-        className
+        className,
       )}
     >
       {children}
@@ -147,7 +147,7 @@ export function MobileNavMenu({ children, className, isOpen, onClose }) {
           exit={{ opacity: 0 }}
           className={cn(
             "absolute inset-x-0 top-16 z-50 flex w-full flex-col items-start justify-start gap-4 rounded-lg bg-white px-4 py-8 shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] dark:bg-neutral-950",
-            className
+            className,
           )}
         >
           {children}
@@ -183,7 +183,7 @@ export function NavbarLogo() {
         width={30}
         height={30}
       />
-      <span className="font-medium text-zinc-600 dark:text-neutral-300">
+      <span className="font-medium text-zinc-600 dark:text-neutral-200 transition duration-300">
         Kavin A.
       </span>
     </Link>
@@ -195,7 +195,7 @@ export const MobileNavHeader = ({ children, className }) => {
     <div
       className={cn(
         "flex w-full flex-row items-center justify-between pr-2",
-        className
+        className,
       )}
     >
       {children}

@@ -392,13 +392,12 @@ export const timelineData = [
           Freelance Web Developer
         </h2>
         <Paragraph>
-          I build and maintain WordPress websites using Elementor, supported by
-          hands-on coding experience in HTML, CSS, and JavaScript. My recent
-          projects include replicating reference websites, managing content
-          updates, configuring redirects and hosting settings on Hostinger,
-          implementing SEO meta titles and descriptions, and adding custom
-          schema tags to improve search visibility. I prioritize responsive
-          design, clean structure, and reliable performance for every project.
+          Specializing in WordPress and Elementor, creating responsive,
+          SEO-optimized websites with a strong focus on performance,
+          accessibility, and user experience. Partnered with clients across
+          various industries to build tailored web solutions, maintain and
+          update existing sites, optimize content and structure for search
+          engines, and ensure long-term site stability and growth.
         </Paragraph>
       </div>
     ),
