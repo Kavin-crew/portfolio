@@ -1,7 +1,6 @@
 "use client";
 
 import HeadingSecondary from "@/app/_components/HeadingSecondary";
-import HeadingQuaternary from "@/app/_components/HeadingQuaternary";
 import Paragraph from "@/app/_components/Paragraph";
 import { projectsContent } from "@/app/_data/projectsContent";
 import { HoverEffect } from "@/app/_components/ui/card-hover-effect";

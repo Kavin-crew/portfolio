@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@radix-ui/react-label": "^2.1.8",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.27",
     "motion": "^12.23.26",
