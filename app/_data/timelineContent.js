@@ -389,15 +389,13 @@ export const timelineData = [
     content: (
       <div key="2026">
         <h2 className="mb-8 text-xl md:text-1xl font-bold text-zinc-800 dark:text-zinc-100 ">
-          Freelance Web Developer
+          Web Developer (Freelance Team Collaboration)
         </h2>
         <Paragraph>
-          Specializing in WordPress and Elementor, creating responsive,
-          SEO-optimized websites with a strong focus on performance,
-          accessibility, and user experience. Partnered with clients across
-          various industries to build tailored web solutions, maintain and
-          update existing sites, optimize content and structure for search
-          engines, and ensure long-term site stability and growth.
+          Build and maintain responsive WordPress websites using Elementor,
+          focusing on SEO, performance, and user experience. Work alongside a
+          freelance team to deliver customized solutions, optimize site
+          structure, and ensure long-term scalability and reliability.
         </Paragraph>
       </div>
     ),

@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Paragraph from "@/app/_components/Paragraph";
 import HeadingQuaternary from "@/app/_components/HeadingQuaternary";
 import { FaCodeFork } from "react-icons/fa6";
+import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -43,10 +44,13 @@ export function HoverEffect({ items, className }) {
           </AnimatePresence>
           <div className="grid grid-rows-[1fr_40px_44px] bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-900 dark:ring-0 rounded-2xl h-full w-full p-4 overflow-hidden border border-transparent relative z-20">
             <Link href={item?.link} target="_blank">
-              <span className="relative z-10 mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-600 dark:bg-zinc-200 dark:ring-0 overflow-hidden">
+              <span className="relative z-10 mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-600 dark:ring-0 overflow-hidden">
                 {item?.logo}
               </span>
-              <HeadingQuaternary>{item.title}</HeadingQuaternary>
+              <HeadingQuaternary className="flex gap-2 items-center">
+                {item.title}
+                <ArrowUpRightIcon className="h-4 w-4 fill-violet-600 transition hover:fill-violet-700 dark:fill-violet-400 dark:hover:fill-violet-500" />
+              </HeadingQuaternary>
               <Paragraph className="mb-4!">{item.description}</Paragraph>
             </Link>
             {item?.icons && (
@@ -63,8 +67,8 @@ export function HoverEffect({ items, className }) {
             )}
             <Link
               href={item.githublink}
-              className="flex items-center gap-2 mt-5 pl-1 text-sm font-medium text-zinc-600 dark:text-zinc-300 hover:text-violet-400 dark:hover:text-violet-400 transition duration-100"
               target="_blank"
+              className="flex items-center gap-2 mt-5 pl-1 text-sm font-medium text-zinc-600 dark:text-zinc-300 hover:text-violet-400 dark:hover:text-violet-400 transition duration-100"
             >
               <FaCodeFork className="h-4 w-4 fill-violet-600 transition group-hover:fill-violet-700 dark:fill-violet-400 dark:group-hover:fill-violet-500" />
               View on Github

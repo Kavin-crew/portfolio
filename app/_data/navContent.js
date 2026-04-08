@@ -7,41 +7,42 @@ import {
   ArrowTrendingUpIcon,
 } from "@heroicons/react/24/solid";
 
+const iconClass =
+  "h-4 w-4 fill-violet-600 transition hover:fill-violet-700 dark:fill-violet-400 dark:hover:fill-violet-500";
+
+export const ICONS = {
+  userIcon: <UserIcon className={iconClass} />,
+  arrowUp: <ArrowTrendingUpIcon className={iconClass} />,
+  trophyIcon: <TrophyIcon className={iconClass} />,
+  codeBracketIcon: <CodeBracketIcon className={iconClass} />,
+  phoneIcon: <PhoneIcon className={iconClass} />,
+};
+
 // Navigation Items
 export const navItems = [
   {
     name: "About",
     link: "/about",
-    icon: (
-      <UserIcon className="h-4 w-4 text-violet-600 transition group-hover:fill-violet-700 dark:fill-violet-200 dark:group-hover:fill-violet-100 duration-300" />
-    ),
+    icon: ICONS.userIcon,
   },
   {
     name: "Timeline",
     link: "/timeline",
-    icon: (
-      <ArrowTrendingUpIcon className="h-4 w-4 text-violet-600 transition group-hover:fill-violet-700 dark:fill-violet-200 dark:group-hover:fill-violet-100 duration-300" />
-    ),
+    icon: ICONS.arrowUp,
   },
   {
     name: "Achievements",
     link: "/achievements",
-    icon: (
-      <TrophyIcon className="h-4 w-4 text-violet-600 transition group-hover:fill-violet-700 dark:fill-violet-200 dark:group-hover:fill-violet-100 duration-300" />
-    ),
+    icon: ICONS.trophyIcon,
   },
   {
     name: "Projects",
     link: "/projects",
-    icon: (
-      <CodeBracketIcon className="h-4 w-4 text-violet-600 transition group-hover:fill-violet-700 dark:fill-violet-200 dark:group-hover:fill-violet-100 duration-300" />
-    ),
+    icon: ICONS.codeBracketIcon,
   },
   {
     name: "Contact",
     link: "/contact",
-    icon: (
-      <PhoneIcon className="h-4 w-4 text-violet-600 transition group-hover:fill-violet-700 dark:fill-violet-200 dark:group-hover:fill-violet-100 duration-300" />
-    ),
+    icon: ICONS.phoneIcon,
   },
 ];
