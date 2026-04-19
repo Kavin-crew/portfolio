@@ -47,7 +47,7 @@ export default function ContactPage() {
               <Input id="email" type="email" />
             </LabelInputContainer>
             <LabelInputContainer className="mb-4">
-              <Label htmlFor="password">Password</Label>
+              <Label htmlFor="password">Message</Label>
               <Input id="password" />
             </LabelInputContainer>
             <p className="text-red-500 mb-5">

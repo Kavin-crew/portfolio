@@ -382,6 +382,109 @@ export const workScreenshotWeaver = [
   },
 ];
 
+export const workScreenshotFreelance = [
+  {
+    image:
+      "https://res.cloudinary.com/kavin-crew/image/upload/q_auto/f_auto/v1776578128/portfolio-images/VMG_cqiiou.webp",
+    url: "https://vintagemarinegraphics.com/",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/kavin-crew/image/upload/q_auto/f_auto/v1776578166/portfolio-images/Triple_J_xjzdib.webp",
+    url: "https://triplejconstructionservices.com/",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/kavin-crew/image/upload/q_auto/f_auto/v1776578140/portfolio-images/Vintagesigns_pn1tel.webp",
+    url: "https://vintagesignandlight.com/",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/kavin-crew/image/upload/q_auto/f_auto/v1776578155/portfolio-images/Vintagewraps_tmrl58.webp",
+    url: "https://vintagewraps.com/",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/kavin-crew/image/upload/q_auto/f_auto/v1776578188/portfolio-images/Shymsaunas_sfmhwf.webp",
+    url: "https://shymsaunas.com.au/",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/kavin-crew/image/upload/q_auto/f_auto/v1776578279/portfolio-images/FAC_mqtny8.webp",
+    url: "https://flawlessaesthetics.com.au/",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/kavin-crew/image/upload/q_auto/f_auto/v1776578264/portfolio-images/Dixon_motors_i15upl.webp",
+    url: "https://dixonmotorsports.com/",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/kavin-crew/image/upload/q_auto/f_auto/v1776578208/portfolio-images/TJY_law_ziml3f.webp",
+    url: "https://tjylaw.com/",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/kavin-crew/image/upload/q_auto/f_auto/v1776578303/portfolio-images/Flexstaff_ifua9t.webp",
+    url: "https://flexstaffapp.wpenginepowered.com/",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/kavin-crew/image/upload/q_auto/f_auto/v1776579643/portfolio-images/Fence_Fenders_f43drl.webp",
+    url: "https://powderblue-emu-898991.hostingersite.com/",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/kavin-crew/image/upload/q_auto/f_auto/v1776578179/portfolio-images/USsweeteners_nfexsg.webp",
+    url: "https://www.ussweeteners.com/",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/kavin-crew/image/upload/q_auto/f_auto/v1776578247/portfolio-images/Integral_product_services_etrppw.webp",
+    url: "https://integralproductservices.com/",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/kavin-crew/image/upload/q_auto/f_auto/v1776578198/portfolio-images/Steps2life_ixme66.webp",
+    url: "https://staging.steps2life.com.au/",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/kavin-crew/image/upload/q_auto/f_auto/v1776578236/portfolio-images/lighterUSA_xs7yws.webp",
+    url: "https://lighterusa.net/",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/kavin-crew/image/upload/q_auto/f_auto/v1776576255/portfolio-images/ctrlshiftapp_g0cn9v.webp",
+    url: "https://ctrlshiftapp.com/",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/kavin-crew/image/upload/q_auto/f_auto/v1776578225/portfolio-images/Jump_spike_trainer_j57rkb.webp",
+    url: "https://jumpspiketrainer.com/",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/kavin-crew/image/upload/q_auto/f_auto/v1776575973/portfolio-images/Chitchat_rl7lyn.webp",
+    url: "https://chitchatmarketingllc.com/",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/kavin-crew/image/upload/q_auto/f_auto/v1776579642/portfolio-images/American_home_buid0o.webp",
+    url: "https://njahc.com/",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/kavin-crew/image/upload/q_auto/f_auto/v1776579643/portfolio-images/Fridayapp_ay4bco.webp",
+    url: "https://fridayapp.com/",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/kavin-crew/image/upload/q_auto/f_auto/v1776579765/portfolio-images/Rydronix_imn7hk.webp",
+    url: "https://palevioletred-kudu-462286.hostingersite.com/",
+  },
+];
+
 // Timeline Data
 export const timelineData = [
   {
@@ -397,6 +500,16 @@ export const timelineData = [
           freelance team to deliver customized solutions, optimize site
           structure, and ensure long-term scalability and reliability.
         </Paragraph>
+
+        <h3 className="text-lg font-semibold mb-5 text-zinc-800 dark:text-zinc-100">
+          Career Highlights
+        </h3>
+        <Paragraph>
+          A curated selection of impactful projects I’ve contributed to,
+          showcasing my ability to translate client requirements into refined,
+          user-centric web experiences that drive engagement and results.
+        </Paragraph>
+        <ThreeDMarquee items={workScreenshotFreelance} />
       </div>
     ),
   },
