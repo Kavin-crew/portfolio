@@ -488,7 +488,7 @@ export const workScreenshotFreelance = [
 // Timeline Data
 export const timelineData = [
   {
-    title: "Dec 2025 - Present",
+    title: "Dec 2025 - April 2026",
     content: (
       <div key="2026">
         <h2 className="mb-8 text-xl md:text-1xl font-bold text-zinc-800 dark:text-zinc-100 ">
