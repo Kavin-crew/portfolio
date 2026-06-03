@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import { NavbarDemo } from "@/app/_components/Navbar";
 import { ThemeProvider } from "next-themes";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 const inter = Inter({
@@ -24,7 +25,10 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className} antialiased min-h-screen`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NavbarDemo />
-          <main className="w-full">{children}</main>
+          <main className="w-full">
+            {children}
+            <Toaster position="top-right" />
+          </main>
         </ThemeProvider>
       </body>
     </html>

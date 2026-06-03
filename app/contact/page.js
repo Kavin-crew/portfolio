@@ -5,12 +5,22 @@ import HeadingSecondary from "@/app/_components/HeadingSecondary";
 import Paragraph from "@/app/_components/Paragraph";
 import { Label } from "@/app/_components/ui/label";
 import { Input } from "@/app/_components/ui/input";
+import { useActionState, useEffect } from "react";
+import { sendEmail } from "@/app/api/actions/route";
+import toast from "react-hot-toast";
 
 export default function ContactPage() {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted");
-  };
+  const [state, formAction, isPending] = useActionState(sendEmail, null);
+
+  useEffect(() => {
+    if (!state) return;
+
+    if (state.success) {
+      toast.success(state.message || "Message sent!");
+    } else {
+      toast.error(state.message || "Something went wrong.");
+    }
+  }, [state]);
 
   return (
     <section className="relative bg-white min-h-dvh dark:bg-neutral-950 mx-auto pb-20 pt-32 px-4 md:px-8 lg:pb-32">
@@ -23,7 +33,7 @@ export default function ContactPage() {
           build something great together.
         </Paragraph>
 
-        <div className="shadow-input mx-auto w-full rounded-none bg-white p-4 md:rounded-2xl md:p-8 dark:bg-black">
+        <div className="shadow-input mx-auto w-full rounded-xl bg-white p-4 md:rounded-2xl md:p-8 dark:bg-black">
           <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
             Contact Me
           </h2>
@@ -31,35 +41,49 @@ export default function ContactPage() {
             Have something in mind? Drop a message below and let’s discuss your
             project.
           </p>
-          <form className="my-8" onSubmit={handleSubmit}>
+
+          <form className="my-8" action={formAction}>
             <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
               <LabelInputContainer>
-                <Label htmlFor="firstname">First name</Label>
-                <Input id="firstname" type="text" />
-              </LabelInputContainer>
-              <LabelInputContainer>
-                <Label htmlFor="lastname">Last name</Label>
-                <Input id="lastname" type="text" />
+                <Label htmlFor="name">Full Name</Label>
+                <Input
+                  id="name"
+                  name="name"
+                  type="text"
+                  required
+                  disabled={isPending}
+                />
               </LabelInputContainer>
             </div>
+
             <LabelInputContainer className="mb-4">
               <Label htmlFor="email">Email Address</Label>
-              <Input id="email" type="email" />
+              <Input
+                id="email"
+                name="email"
+                type="email"
+                required
+                disabled={isPending}
+              />
             </LabelInputContainer>
+
             <LabelInputContainer className="mb-4">
-              <Label htmlFor="password">Message</Label>
-              <Input id="password" />
+              <Label htmlFor="message">Message</Label>
+              <Input
+                id="message"
+                name="message"
+                required
+                disabled={isPending}
+                type="textarea"
+              />
             </LabelInputContainer>
-            <p className="text-red-500 mb-5">
-              <b>Reminder:</b> This form is still under development and may not
-              work as expected. Please feel free to reach out via email or
-              social links in the meantime.
-            </p>
+
             <button
               className="group/btn relative block h-10 w-full rounded-md bg-linear-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
               type="submit"
+              disabled={isPending}
             >
-              Submit &rarr;
+              {isPending ? "Sending..." : "Send Message"}
               <BottomGradient />
             </button>
           </form>
