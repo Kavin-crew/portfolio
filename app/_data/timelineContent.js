@@ -488,6 +488,30 @@ export const workScreenshotFreelance = [
 // Timeline Data
 export const timelineData = [
   {
+    title: "May 2026 - Present",
+    content: (
+      <div key="present">
+        <h2 className="mb-8 text-xl md:text-1xl font-bold text-zinc-800 dark:text-zinc-100 ">
+          Part-time Web Customization
+          <Link href="https://monx.team/" target="_blank">
+            <span className="text-violet-400 dark:text-via-violet-300">
+              {" "}
+              @ CyberMonx
+            </span>
+          </Link>
+        </h2>
+        <Paragraph>
+          Focusing on building, optimizing, and maintaining WordPress websites
+          using Elementor. Managed hosting environments across platforms like
+          Hostinger and Cloudways, ensuring reliable performance and smooth
+          deployments. Handled ongoing site improvements, documentation, and
+          troubleshooting to deliver fast, secure, and user-friendly web
+          experiences.
+        </Paragraph>
+      </div>
+    ),
+  },
+  {
     title: "Dec 2025 - April 2026",
     content: (
       <div key="2026">
